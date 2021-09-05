@@ -60,3 +60,38 @@
         bottom: -5px;
     }
 }
+.header__bottom{
+    margin-bottom: 80px;
+}
+.menu-categories{
+    background: #F0F0F4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 53px;
+}
+.menu-categories__link{
+    transition: all .3s;
+    border-bottom: 3px solid transparent;
+    padding: 15px 0 14px;
+    position: relative;
+    &:before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        left: auto;
+        right: 0;
+        bottom: -2px;
+        background-color: #1C62CD;
+        transition: all .3s;
+    }
+    &:hover{
+        color: #000;
+        &:before{
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+    }
+}
