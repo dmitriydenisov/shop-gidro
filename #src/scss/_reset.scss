@@ -8,13 +8,11 @@ html{
   box-sizing: inherit;
 }
 
-ul[class],
-ol[class] {
+ul,
+li {
   padding: 0;
-}
-
-body{
-  color: #2F3035;
+  margin: 0;
+  list-style: none;
 }
 
 body,
@@ -36,23 +34,14 @@ dd {
   margin: 0;
 }
 
-.container{
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
 
-ul[class] {
-  list-style: none;
-}
 
 img {
   max-width: 100%;
   display: block;
 }
 
-
-
 a{
   text-decoration: none;
+  color: inherit;
 }

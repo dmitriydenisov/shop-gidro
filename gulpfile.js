@@ -13,7 +13,7 @@ let path= {
   },
   //объект путей исходных файлов
   src: {
-    html: source_folder + '/pug/index.pug',
+    html: source_folder + '/pug/*.pug',
     css: source_folder + '/scss/main.scss',
     js: source_folder + '/js/*.js',
     img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico.webp}',

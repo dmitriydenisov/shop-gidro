@@ -26,13 +26,17 @@ html(lang="en")
                             ul.user-list
                                 li.user-list__item 
                                     a.user-list__link(href="#") 
+                                        img.user-list__img(src="img/heart.svg", alt="")
                                 li.user-list__item 
                                     a.user-list__link(href="#") 
+                                        img.user-list__img(src="img/user.svg", alt="")
                                 li.user-list__item 
-                                    a.user-list__link(href="#") 
+                                    a.user-list__link.basket(href="#") 
+                                        img.user-list__img(src="img/basket.svg", alt="")
+                                        p.basket__num 1
             .header__bottom
                 .container
-                    .menu-categories 
+                    ul.menu-categories 
                         li.menu-categories
                             a.menu-categories__link(href="#") Квадроциклы
                         li.menu-categories
