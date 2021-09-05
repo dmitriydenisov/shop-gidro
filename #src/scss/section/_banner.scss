@@ -6,9 +6,12 @@
     }
     &__slider{
         max-width: 870px;
-        margin-right: 40px;
         overflow: hidden;
         position: relative;
+    }
+    &__slider-img{
+        object-fit: cover;
+        min-height: 400px;
     }
     .swiper-prev,
     .swiper-next{
@@ -29,9 +32,97 @@
     .swiper-pagination-bullet{
         background-color: transparent;
         border: 1px solid #FFFFFF;
-    } 
+    }
     .swiper-pagination-bullet-active{
         background-color: #fff;
     }
 
+}
+.sale-item{
+    max-width: 265px;
+    text-align: center;
+    border: 1px solid #CDCDCD;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__info{
+        color: #fff;
+        background-color: #1C62CD;
+        text-transform: uppercase;
+        padding: 8px 20px;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+    }
+    &__price{
+        text-align: right;
+    }
+    &__price-new{
+        font-weight: 700;
+        font-size: 27px;
+        line-height: 32px;
+        color: #1C62CD;
+        margin-right: 6px;
+        padding-right: 20px;
+        &:after{
+            position: absolute;
+            top: 8px;
+            right: 0;
+            content: "";
+            background-image: url('../img/icons-price.svg');
+            width: 15px;
+            height: 18px;
+        }
+    }
+    &__price-old{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #C4C4C4;
+        margin-right: 15px;
+        background-image: url('../img/old-line.svg');
+        background-repeat: no-repeat;
+        padding: 2px 5px;
+        display: inline-block;
+        &:after{
+            position: absolute;
+            top: 8px;
+            right: -10px;
+            content: "";
+            background-image: url('../img/icons-price-old.svg');
+            width: 8px;
+            height: 10px;
+        }
+    }
+    // &__img{
+    //     object-fit: contain;
+    // }
+    &__title{
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 700;
+        font-family: 'SFProDisplay-Bold', sans-serif;
+        margin-bottom: 7px;
+    }
+    &__footer{
+        background: #F0F0F4;
+        padding: 25px 20px;
+        font-size: 18px;
+        line-height: 21px;
+        span{
+            color: #1C62CD;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 700;
+        }
+    }
+
+}
+.sale-item__img{
+    object-fit: contain;
 }

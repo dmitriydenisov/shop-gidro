@@ -5,11 +5,14 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title drive moto
         link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        //- link(rel="preconnect" href="https://fonts.googleapis.com")
+        //- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="css/main.min.css")
 
     body
         header.header
-            .header__top 
+            .header__top
                 .container
                     .header__top-inner
                         nav.menu
@@ -22,22 +25,22 @@ html(lang="en")
                                     a.menu__link(href="#") Доставка и оплата
                         a.logo(href="#")
                             img.logo__img(src="img/logo.svg", alt="")
-                        .header__box 
+                        .header__box
                             .header__adress Москва,  ул. Науки  25
                             ul.user-list
-                                li.user-list__item 
-                                    a.user-list__link(href="#") 
+                                li.user-list__item
+                                    a.user-list__link(href="#")
                                         img.user-list__img(src="img/heart.svg", alt="")
-                                li.user-list__item 
-                                    a.user-list__link(href="#") 
+                                li.user-list__item
+                                    a.user-list__link(href="#")
                                         img.user-list__img(src="img/user.svg", alt="")
-                                li.user-list__item 
-                                    a.user-list__link.basket(href="#") 
+                                li.user-list__item
+                                    a.user-list__link.basket(href="#")
                                         img.user-list__img(src="img/basket.svg", alt="")
                                         p.basket__num 1
             .header__bottom
                 .container
-                    ul.menu-categories 
+                    ul.menu-categories
                         li.menu-categories__item
                             a.menu-categories__link(href="#") Квадроциклы
                         li.menu-categories__item
@@ -59,24 +62,24 @@ html(lang="en")
                 .banner-section__inner
                     .banner-section__slider.swiper-container
                         .swiper-wrapper
-                            .banner-section__slide.swiper-slide                            
+                            .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img(src="img/banner/banner-slide.jpg", alt="")
-                            .banner-section__slide.swiper-slide                                    
+                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                            .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img(src="img/banner/banner-slide.jpg", alt="")
-                            .banner-section__slide.swiper-slide                                    
+                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                            .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img(src="img/banner/banner-slide.jpg", alt="")
-                            .banner-section__slide.swiper-slide                                    
+                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                            .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img(src="img/banner/banner-slide.jpg", alt="")
-                            .banner-section__slide.swiper-slide                                    
+                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                            .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img(src="img/banner/banner-slide.jpg", alt="")
-                            .banner-section__slide.swiper-slide                                    
+                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                            .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img(src="img/banner/banner-slide.jpg", alt="")
+                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
                         .swiper-prev
                             img(src="img/arrow-left.svg", alt="")
                         .swiper-next
@@ -84,13 +87,13 @@ html(lang="en")
                         .swiper-pagination
                     a.banner-section__item.sale-item(href="#")
                         .sale-item__top
-                            .sale-item__info акция
+                            p.sale-item__info акция
                             .sale-item__price
                                 .price.sale-item__price-new 190 000
                                 .price.sale-item__price-old 225 000
-                            img.sale-item__img(src="img/usercontent/sale.png", alt="")
-                            h5.sale-item__title Лодочный мотор Suzuki DF9.9BRS
-                            .sale-item__footer Акция действует до
-                                span 31.08.2020
+                        img.sale-item__img(src="img/usercontent/sale.png", alt="")
+                        h5.sale-item__title Лодочный мотор Suzuki DF9.9BRS
+                        p.sale-item__footer Акция действует до 
+                            span 31.08.2020
     script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(src="js/main.js")
