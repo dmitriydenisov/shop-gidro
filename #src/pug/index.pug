@@ -3,7 +3,8 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title 
+        title drive moto
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="stylesheet" href="css/main.min.css")
 
     body
@@ -53,4 +54,43 @@ html(lang="en")
                             a.menu-categories__link(href="#") Двигатели
                         li.menu-categories__item
                             a.menu-categories__link(href="#") Запчасти
+        section.banner-section
+            .container
+                .banner-section__inner
+                    .banner-section__slider.swiper-container
+                        .swiper-wrapper
+                            .banner-section__slide.swiper-slide                            
+                                a.banner-section__slider-item(href="#")
+                                    img(src="img/banner/banner-slide.jpg", alt="")
+                            .banner-section__slide.swiper-slide                                    
+                                a.banner-section__slider-item(href="#")
+                                    img(src="img/banner/banner-slide.jpg", alt="")
+                            .banner-section__slide.swiper-slide                                    
+                                a.banner-section__slider-item(href="#")
+                                    img(src="img/banner/banner-slide.jpg", alt="")
+                            .banner-section__slide.swiper-slide                                    
+                                a.banner-section__slider-item(href="#")
+                                    img(src="img/banner/banner-slide.jpg", alt="")
+                            .banner-section__slide.swiper-slide                                    
+                                a.banner-section__slider-item(href="#")
+                                    img(src="img/banner/banner-slide.jpg", alt="")
+                            .banner-section__slide.swiper-slide                                    
+                                a.banner-section__slider-item(href="#")
+                                    img(src="img/banner/banner-slide.jpg", alt="")
+                        .swiper-prev
+                            img(src="img/arrow-left.svg", alt="")
+                        .swiper-next
+                            img(src="img/arrow-right.svg", alt="")
+                        .swiper-pagination
+                    a.banner-section__item.sale-item(href="#")
+                        .sale-item__top
+                            .sale-item__info акция
+                            .sale-item__price
+                                .price.sale-item__price-new 190 000
+                                .price.sale-item__price-old 225 000
+                            img.sale-item__img(src="img/usercontent/sale.png", alt="")
+                            h5.sale-item__title Лодочный мотор Suzuki DF9.9BRS
+                            .sale-item__footer Акция действует до
+                                span 31.08.2020
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(src="js/main.js")

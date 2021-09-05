@@ -1,0 +1,37 @@
+.banner-section{
+    margin-bottom: 80px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__slider{
+        max-width: 870px;
+        margin-right: 40px;
+        overflow: hidden;
+        position: relative;
+    }
+    .swiper-prev,
+    .swiper-next{
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        cursor: pointer;
+    }
+    .swiper-prev{
+        left: 15px;
+    }
+    .swiper-next{
+        right: 15px;
+    }
+    .swiper-pagination{
+        bottom: 40px;
+    }
+    .swiper-pagination-bullet{
+        background-color: transparent;
+        border: 1px solid #FFFFFF;
+    } 
+    .swiper-pagination-bullet-active{
+        background-color: #fff;
+    }
+
+}
