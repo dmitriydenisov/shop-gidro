@@ -95,5 +95,25 @@ html(lang="en")
                         h5.sale-item__title Лодочный мотор Suzuki DF9.9BRS
                         p.sale-item__footer Акция действует до 
                             span 31.08.2020
+        section.search
+            .container 
+                .search__inner 
+                    .search__tabs 
+                        a.search__tabs-item(href="#tab-1") Поиск по  номеру
+                        a.search__tabs-item(href="#tab-2") Поиск по марке
+                        a.search__tabs-item(href="#tab-3") Поиск по названию товара
+                    .search__content
+                        .search__content-item#tab-1
+                            form.search__content-form
+                                input.serch__content-input(type="text" placeholder="Введите номер")
+                                button.serch__content-button(type="submit") Искать
+                        .serch__content-item#tab-2
+                            form.search__content-form
+                                input.serch__content-input(type="text" placeholder="Введите марку")
+                                button.serch__content-button(type="submit") Искать
+                        .serch__content-item#tab-3
+                            form.search__content-form
+                                input.serch__content-input(type="text" placeholder="Введите название")
+                                button.serch__content-button(type="submit") Искать
     script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(src="js/main.js")
