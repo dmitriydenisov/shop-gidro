@@ -60,7 +60,7 @@ html(lang="en")
         section.banner-section
             .container
                 .banner-section__inner
-                    .banner-section__slider.swiper-container
+                    .banner-section__slider.swiper
                         .swiper-wrapper
                             .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
@@ -167,72 +167,77 @@ html(lang="en")
                             button.products__tab аксессуары
                         .tab-container.products__container
                             .tab-content.product__content.tabs-content--active
-                                .product-slider
-                                    .product-slider__item
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item
-                                        .product-item__wrapper.product-item__not-available
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item
-                                        .product-item__wrapper.product-item__not-available
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item
-                                        .product-item__wrapper.product-item__not-available
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
+                                .product-slider.swiper
+                                    .swiper-wrapper
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper.product-item__not-available
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                .product-slider__btn.prev 
+                                    img(src="img/arrow-products-prev.svg", alt="")
+                                .product-slider__btn.next
+                                    img(src="img/arrow-products-next.svg", alt="")
                             .tab-content.product__content
                             .tab-content.product__content
                             .tab-content.product__content

@@ -4,6 +4,15 @@
     }
 }
 .product{
+    &__content{
+        position: relative;
+    }
+    &-slider__btn{
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        cursor: pointer;
+    }
     &-item__wrapper{
         position: relative;
         max-width: 271px;
@@ -95,6 +104,12 @@
         transition: all .3s;
         
     }
+}
+.product-slider__btn.prev{
+            left: -25px;
+}
+.product-slider__btn.next{
+    right: -25px;
 }
 .product-item:hover{
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);

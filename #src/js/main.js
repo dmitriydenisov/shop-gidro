@@ -1,4 +1,4 @@
-const swiper = new Swiper(".banner-section__slider", {
+const banner = new Swiper(".banner-section__slider", {
     loop: true,
     speed: 900,
     slidesPerView: 1,
@@ -12,6 +12,16 @@ const swiper = new Swiper(".banner-section__slider", {
         clickable: true,
       },
 });
+const productSlider = new Swiper('.product-slider',{
+  loop: true,
+  speed: 900,
+  slidesPerView: 4,
+  spaceBetween: 30,
+  navigation: {
+      nextEl: ".next",
+      prevEl: ".prev",
+    },
+})
 
 // табы
 const tabsBtn = document.querySelectorAll('.tab');
@@ -47,3 +57,4 @@ const favorite = document.querySelector('.product-item__favorite');
 favorite.addEventListener('click', function(){
   favorite.classList.toggle('product-item__favorite--active');
 });
+
