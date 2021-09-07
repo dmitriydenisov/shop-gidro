@@ -14,13 +14,14 @@
         }
     }
 }
-.search__content{
-    .tabs-content{
-        display: none;
-        &--active{
-            display: block;
-        }
+.tabs-content{
+    display: none;
+    &--active{
+        display: block;
     }
+}
+.search__content{
+    
     &-form{
         display: flex;
     }

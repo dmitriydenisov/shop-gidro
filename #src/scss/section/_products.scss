@@ -1,7 +1,28 @@
 .products{
-    &__tab{
-        margin-bottom: 25px;
+    &__tabs{
+        margin: 25px 0;
     }
+    &__tab{
+        +.products__tab{
+            margin-left: 50px;
+        }
+        background-color: transparent;
+        border: none;
+        outline: none;
+        position: relative;
+        cursor: pointer;
+        font-family: 'SFProDisplay-Medium', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        padding-bottom: 12px;
+        .tab--active{
+            border-bottom: 1px solid #1C62CD;
+        }
+    }
+}
+.products__tab.tab--active{
+    border-bottom: 1px solid #1C62CD;
 }
 .product{
     &__content{

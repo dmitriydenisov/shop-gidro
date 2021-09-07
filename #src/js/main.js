@@ -39,7 +39,7 @@ function onTabCkick(item){
       tabsBtn.forEach(function(item){
         item.classList.remove('tab--active');
       });
-  
+
       tabsItems.forEach(function(item){
         item.classList.remove('tabs-content--active');
       });
@@ -52,9 +52,20 @@ function onTabCkick(item){
 }
 // document.querySelector('.search__tabs-item').click();
 
-const favorite = document.querySelector('.product-item__favorite');
+// const favorite = document.querySelector('.product-item__favorite');
 
-favorite.addEventListener('click', function(){
-  favorite.classList.toggle('product-item__favorite--active');
-});
+// favorite.forEach(onFavorite);
+
+// function onFavorite(item){
+//   item.addEventListener('click', function(){ 
+//       currentTab.classList.toggle('product-item__favorite--active');
+//     })
+//   };
+
+
+
+
+// favorite.addEventListener('click', function(){
+//   favorite.classList.toggle('product-item__favorite--active');
+// });
 
