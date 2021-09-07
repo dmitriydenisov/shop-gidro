@@ -13,7 +13,7 @@ const swiper = new Swiper(".banner-section__slider", {
       },
 });
 
-// табы поиска
+// табы
 const tabsBtn = document.querySelectorAll('.tab');
 const tabsItems = document.querySelectorAll('.tabs-content');
 
@@ -41,3 +41,9 @@ function onTabCkick(item){
   });
 }
 // document.querySelector('.search__tabs-item').click();
+
+const favorite = document.querySelector('.product-item__favorite');
+
+favorite.addEventListener('click', function(){
+  favorite.classList.toggle('product-item__favorite--active');
+});
