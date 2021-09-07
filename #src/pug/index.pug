@@ -99,19 +99,19 @@ html(lang="en")
             .container 
                 .search__inner 
                     .search__tabs 
-                        button.search__tabs-item(data-tab="#tab_1") Поиск по  номеру
-                        button.search__tabs-item(data-tab="#tab_2") Поиск по марке
-                        button.search__tabs-item(data-tab="#tab_3") Поиск по названию товара
+                        button.tab.search__tabs-item.tab--active(data-tab="#tab_1") Поиск по  номеру
+                        button.tab.search__tabs-item(data-tab="#tab_2") Поиск по марке
+                        button.tab.search__tabs-item(data-tab="#tab_3") Поиск по названию товара
                     .search__content
-                        .search__content-item#tab_1
+                        .tabs-content.search__content-item.tabs-content--active#tab_1
                             form.search__content-form
                                 input.search__content-input(type="text" placeholder="Введите номер")
                                 button.search__content-btn(type="submit") Искать
-                        .search__content-item#tab_2
+                        .tabs-content.search__content-item#tab_2
                             form.search__content-form
                                 input.search__content-input(type="text" placeholder="Введите марку")
                                 button.search__content-btn(type="submit") Искать
-                        .search__content-item#tab_3
+                        .tabs-content.search__content-item#tab_3
                             form.search__content-form
                                 input.search__content-input(type="text" placeholder="Введите название")
                                 button.search__content-btn(type="submit") Искать
@@ -154,5 +154,13 @@ html(lang="en")
                             p.categories__item-text Подробее
                         .categories__item-img
                             img(src="img/usercontent/categories-6.png", alt="")
+        section.products 
+            .container 
+                .products__inner
+                    .tabs-wrapper
+                        .tabs
+                            a.tab(href="#") 
+                        .tab-container
+                            .tab-content
     script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(src="js/main.js")

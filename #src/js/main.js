@@ -14,8 +14,8 @@ const swiper = new Swiper(".banner-section__slider", {
 });
 
 // табы поиска
-const tabsBtn = document.querySelectorAll('.search__tabs-item');
-const tabsItems = document.querySelectorAll('.search__content-item');
+const tabsBtn = document.querySelectorAll('.tab');
+const tabsItems = document.querySelectorAll('.tabs-content');
 
 tabsBtn.forEach(onTabCkick);
 
@@ -25,19 +25,19 @@ function onTabCkick(item){
     let tabId = item.getAttribute('data-tab');
     let currentTab = document.querySelector(tabId);
 
-    if(!item.classList.contains('search__tabs-item--active')){
+    if(!item.classList.contains('tab--active')){
       tabsBtn.forEach(function(item){
-        item.classList.remove('search__tabs-item--active');
+        item.classList.remove('tab--active');
       });
   
       tabsItems.forEach(function(item){
-        item.classList.remove('search__content-item--active');
+        item.classList.remove('tabs-content--active');
       });
   
-      item.classList.add('search__tabs-item--active');
+      item.classList.add('tab--active');
       
-      currentTab.classList.add('search__content-item--active');
+      currentTab.classList.add('tabs-content--active');
     }
   });
 }
-document.querySelector('.search__tabs-item').click();
+// document.querySelector('.search__tabs-item').click();
