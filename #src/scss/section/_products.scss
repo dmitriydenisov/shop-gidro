@@ -115,6 +115,9 @@
         bottom: 0;
         cursor: pointer;
     }
+    &-item__img{
+        max-width: 100%;
+    }
     &-item__price{
         font-family: 'Barlow', sans-serif;
         font-weight: 700;
