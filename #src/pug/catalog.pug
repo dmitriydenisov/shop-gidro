@@ -144,12 +144,15 @@ html(lang="en")
                                                     .aside-filter__content
                                                         //- input.aside-filter__slider(type="text" name="range" value="")
                                                         .aside-filter__slider
-                                                        label.aside-filter__slider-label
-                                                            span.aside-filter__slider-text От
-                                                            input.aside-filter__slider.aside-filter__slider-filter#input0(type="number" placeholder="100000" min="100000"  max="500000")
-                                                        label.aside-filter__slider-label
-                                                            span.aside-filter__slider-text До
-                                                            input.aside-filter__slider.aside-filter__slider-filter#input1(type="number" placeholder="500000" min="100000"  max="500000")
+                                                        .aside-filter__slider-inputs
+                                                            label.aside-filter__slider-label
+                                                                span.aside-filter__slider-text от
+                                                                span.input
+                                                                    input.aside-filter__slider-input#input0(type="number" placeholder="100000" min="100000"  max="500000")
+                                                            label.aside-filter__slider-label
+                                                                span.aside-filter__slider-text до
+                                                                span.input
+                                                                    input.aside-filter__slider-input#input1(type="number" placeholder="500000" min="100000"  max="500000")
                                             li.aside-filter__item-list
                                 .tabs-content.aside-filter__tabs-content#model фильтр по модели
                     .catalog__inner-list

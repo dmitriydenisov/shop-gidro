@@ -206,6 +206,37 @@
     width: 95%;
     margin-bottom: 20px;
 }
+.aside-filter__slider-text{
+    font-size: 14px;
+    line-height: 17px;
+    color: #C4C4C4;
+    margin-right: 10px;
+}
+.aside-filter__slider-inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 13px;
+}
+.aside-filter__slider-input{
+    width: 50px;
+    border: none;
+    outline: none;
+    // border-bottom: 1px solid #000;
+    
+}
+.input{
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        left: 3px;
+        bottom: 0;
+        height: 1px;
+        width: 43px;
+        background: #000;
+    }
+}
 .noUi-target{
     height: 3px;
     // border: 3px solid ;
