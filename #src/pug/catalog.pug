@@ -5,9 +5,8 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title drive moto
         link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
-        //- link(rel="preconnect" href="https://fonts.googleapis.com")
-        //- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="libs/nouislider/nouislider.min.css")
         link(rel="stylesheet" href="css/main.min.css")
 
     body
@@ -110,20 +109,47 @@ html(lang="en")
                                     form.aside-filter__form
                                         ul.aside-filter__list 
                                             li.aside-filter__item-drop
-                                                p.aside-filter__item-title Наличие
+                                                p.aside-filter__item-title.filter__item-drop.filter__item-drop--active Наличие
                                                 .aside-filter__content
-                                                    .aside-filter__content-box
-                                                        label.aside-filter__label
-                                                            input.aside-filter__input(type="checkbox")
-                                                            span.aside-filter__style
-                                                            |В наличии
                                                     .aside-filter__content-box
                                                         label.aside-filter__label
                                                             input.aside-filter__input(type="checkbox" checked)
                                                             span.aside-filter__style
+                                                            |В наличии
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style
                                                             |Под заказ
                                             li.aside-filter__item-drop
+                                                p.aside-filter__item-title.filter__item-drop.filter__item-drop--active Новинки
+                                                .aside-filter__content.aside-filter__content--radio
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(name="radio" type="radio" checked)
+                                                            span.aside-filter__style
+                                                            |Все
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(name="radio" type="radio")
+                                                            span.aside-filter__style
+                                                            |Новинки
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(name="radio" type="radio")
+                                                            span.aside-filter__style
+                                                            |Акции
                                             li.aside-filter__item-drop
+                                                p.aside-filter__item-title.filter__item-drop.filter__item-drop--active Цена
+                                                    .aside-filter__content
+                                                        //- input.aside-filter__slider(type="text" name="range" value="")
+                                                        .aside-filter__slider
+                                                        label.aside-filter__slider-label
+                                                            span.aside-filter__slider-text От
+                                                            input.aside-filter__slider.aside-filter__slider-filter#input0(type="number" placeholder="100000" min="100000"  max="500000")
+                                                        label.aside-filter__slider-label
+                                                            span.aside-filter__slider-text До
+                                                            input.aside-filter__slider.aside-filter__slider-filter#input1(type="number" placeholder="500000" min="100000"  max="500000")
                                             li.aside-filter__item-list
                                 .tabs-content.aside-filter__tabs-content#model фильтр по модели
                     .catalog__inner-list
@@ -337,11 +363,5 @@ html(lang="en")
                     a.footer__bottom-link(href="#") Политика обработки персональных данных
 
     script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(src="libs/nouislider/nouislider.min.js")
     script(src="js/main.js")
-
-
-    //- .tabs-wrapper
-    //-     .tabs
-    //-         a.tab(href="#") 
-    //-     .tab-container
-    //-         .tab-content

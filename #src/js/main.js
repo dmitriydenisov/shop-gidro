@@ -23,6 +23,40 @@ const productSlider = new Swiper('.product-slider',{
     },
 })
 
+const rangeSlider = document.querySelector('.aside-filter__slider');
+
+if(rangeSlider){
+  noUiSlider.create(rangeSlider, {
+    start: [100000, 500000],
+    connect: true,
+    step: 1,
+    range: {
+        'min': [100000],
+        'max': [500000]
+  }
+});
+
+const input0 = document.getElementById('input0');
+const input1 = document.getElementById('input1');
+const inputs = [input0, input1];
+
+  rangeSlider.noUiSlider.on('update', function(values, handle){
+    inputs[handle].value = Math.round(values[handle]);
+  });
+  const setRangeSlider =  (i, value) => {
+    let arr = [null, null];
+    arr[i] = value;
+    rangeSlider.noUiSlider.set(arr);
+  };
+
+    inputs.forEach((el, index) => {
+      el.addEventListener('change', (e) =>{
+        setRangeSlider(index, e.currentTarget.value)
+      });
+    });
+}
+
+
 // табы
 const tabsBtn = document.querySelectorAll('.tab');
 const tabsItems = document.querySelectorAll('.tabs-content');
@@ -43,29 +77,16 @@ function onTabCkick(item){
       tabsItems.forEach(function(item){
         item.classList.remove('tabs-content--active');
       });
-  
+
       item.classList.add('tab--active');
-      
       currentTab.classList.add('tabs-content--active');
     }
   });
 }
-// document.querySelector('.search__tabs-item').click();
+//.filter__item-drop
 
-// const favorite = document.querySelector('.product-item__favorite');
+const drop = document.querySelector('.filter__item-drop');
 
-// favorite.forEach(onFavorite);
-
-// function onFavorite(item){
-//   item.addEventListener('click', function(){ 
-//       currentTab.classList.toggle('product-item__favorite--active');
-//     })
-//   };
-
-
-
-
-// favorite.addEventListener('click', function(){
-//   favorite.classList.toggle('product-item__favorite--active');
-// });
-
+drop.addEventListener('click', function(){
+  drop.classList.toggle('filter__item-drop--active')
+})
