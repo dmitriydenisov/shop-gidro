@@ -7,6 +7,7 @@ html(lang="en")
         link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet")
         link(rel="stylesheet", href="libs/nouislider/nouislider.min.css")
+        link(rel="stylesheet", href="libs/choices/choices.min.css")
         link(rel="stylesheet" href="css/main.min.css")
 
     body
@@ -142,7 +143,6 @@ html(lang="en")
                                             li.aside-filter__item-drop
                                                 p.aside-filter__item-title.filter__item-drop.filter__item-drop--active Цена
                                                     .aside-filter__content
-                                                        //- input.aside-filter__slider(type="text" name="range" value="")
                                                         .aside-filter__slider
                                                         .aside-filter__slider-inputs
                                                             label.aside-filter__slider-label
@@ -154,6 +154,21 @@ html(lang="en")
                                                                 span.input
                                                                     input.aside-filter__slider-input#input1(type="number" placeholder="500000" min="100000"  max="500000")
                                             li.aside-filter__item-list
+                                                p.filter__item-list Мощность, л.с.
+                                                select.filter__item-select
+                                                    option(value="90") 90
+                                                    option(value="130") 130
+                                                    option(value="154") 154
+                                                    option(value="230") 230
+                                                    option(value="300") 300
+                                            li.aside-filter__item-list
+                                                p.filter__item-list Мощность двигателя, л.с.
+                                                select.filter__item-select
+                                                    option(value="90") 90
+                                                    option(value="130") 130
+                                                    option(value="154") 154
+                                                    option(value="230") 230
+                                                    option(value="300") 300
                                 .tabs-content.aside-filter__tabs-content#model фильтр по модели
                     .catalog__inner-list
                         .product-item__wrapper
@@ -367,4 +382,5 @@ html(lang="en")
 
     script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(src="libs/nouislider/nouislider.min.js")
+    script(src="libs/choices/choices.min.js")
     script(src="js/main.js")

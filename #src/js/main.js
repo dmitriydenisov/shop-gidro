@@ -56,6 +56,13 @@ const inputs = [input0, input1];
     });
 }
 
+const element = document.querySelectorAll('.filter__item-select');
+element.forEach(el => {
+  const choices = new Choices(el, {
+    searchEnabled: false,
+  });
+})
+
 
 // табы
 const tabsBtn = document.querySelectorAll('.tab');
