@@ -75,9 +75,9 @@ html(lang="en")
                         button еще
                     .catalog__filter-btn
                         select
-                            option(value="") 
-                            option(value="") 
-                            option(value="") 
+                            option(value="По популярности") По популярности
+                            option(value="По убыванию цены") По убыванию цены
+                            option(value="По возрастанию цены") По возрастанию цены
                         button.catalog__filter-btngrid
                             <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="1" y="1" width="21" height="19" stroke="#2F3035" stroke-width="2"/>
@@ -98,7 +98,34 @@ html(lang="en")
                                 </g>
                             </svg>
                 .catalog__inner
-                    aside.catalog__inner-aside 
+                    aside.catalog__inner-aside.aside-filter
+                        .tabs-wrapper
+                            .tabs.aside-filter__tabs
+                                button.tab.aside-filter__tab.tab--active(data-tab="#parametrs")
+                                    span Параметры
+                                button.tab.aside-filter__tab(data-tab="#model")
+                                    span по марке
+                            .tab-container
+                                .tabs-content.aside-filter__tabs-content.tabs-content--active#parametrs
+                                    form.aside-filter__form
+                                        ul.aside-filter__list 
+                                            li.aside-filter__item-drop
+                                                p.aside-filter__item-title Наличие
+                                                .aside-filter__content
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style
+                                                            |В наличии
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox" checked)
+                                                            span.aside-filter__style
+                                                            |Под заказ
+                                            li.aside-filter__item-drop
+                                            li.aside-filter__item-drop
+                                            li.aside-filter__item-list
+                                .tabs-content.aside-filter__tabs-content#model фильтр по модели
                     .catalog__inner-list
                         .product-item__wrapper
                             button.product-item__favorite
