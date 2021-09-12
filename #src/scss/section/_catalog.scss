@@ -44,7 +44,7 @@
         align-items: center;
         .choices{
             border: 1.5px solid #d7d9df;
-            padding: 8px 20px;
+            padding: 7px 20px 7px 8px;
             font-size: 14px;
             line-height: 17px;
             margin-bottom: 0;
@@ -52,9 +52,10 @@
         }
         .choices[data-type*=select-one]:after{
             top: 12px;
+            right: 12px;
         }
         .choices__list--dropdown{
-            width: 197px;
+            width: 185px;
             z-index: 6;
             left: 0;
         }
@@ -62,23 +63,14 @@
             width: 155px;
         }
     }
-    &__filter-select{
-        .choices__inner{
-            width: 50px;
-        }
-        // .aside-filter{
-        //     width: auto;
-        // }
-        .choices .choices__list .choices__list--dropdown{
-            width: 180px;
-            z-index: 6;
-        }
-    }
     &__filter-btngrid{
 
     }
-    &__filter-btnline{
-        
+    &__filter-button{
+        opacity: .3;
+        &--active{
+            opacity: 1;
+        }
     }
     &__inner{
         display: flex;
@@ -245,6 +237,22 @@
         clip: rect(0 0 0 0 );
         padding-left: 20px;
     }
+    &__input:checked + .aside-filter__style{
+        background-color: #1C62CD;
+    }
+    &__input:checked + .aside-filter__style--check{
+        &:before{
+            background-image: url('../img/check.svg');
+            background-repeat: no-repeat;
+            top: 50%;
+            left: 50%;
+            content: '';
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+    }
     &__style{
         position: absolute;
         width: 14px;
@@ -254,56 +262,40 @@
         margin-left: -20px;
         top: 0;
     }
+    &__slider{
+        width: 95%;
+        margin-bottom: 20px;
+    }
+    &__slider-text{
+        font-size: 14px;
+        line-height: 17px;
+        color: #C4C4C4;
+        margin-right: 10px;
+    }
+    &__slider-inputs{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 13px;
+    }
+    &__slider-inputPrice{
+        width: 50px;
+        border: none;
+        outline: none;
+    }
+    &__slider-input{
+        width: 95%;
+        padding: 8px 20px;
+        border: 1px solid #E0E0E0;
+        margin-bottom: 20px;
+        outline: none;
+        &::placeholder{
+            color: #BDBEC2;
+        }
+    }
 }
 .filter__item-select{
     margin-right: 10px;
-}
-.aside-filter__input:checked + .aside-filter__style{
-    background-color: #1C62CD;
-}
-.aside-filter__input:checked + .aside-filter__style--check{
-    &:before{
-        background-image: url('../img/check.svg');
-        background-repeat: no-repeat;
-        top: 50%;
-        left: 50%;
-        content: '';
-        width: 8px;
-        height: 8px;
-        position: absolute;
-        transform: translate(-50%, -50%);
-    }
-}
-.aside-filter__slider{
-    width: 95%;
-    margin-bottom: 20px;
-}
-.aside-filter__slider-text{
-    font-size: 14px;
-    line-height: 17px;
-    color: #C4C4C4;
-    margin-right: 10px;
-}
-.aside-filter__slider-inputs{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 13px;
-}
-.aside-filter__slider-inputPrice{
-    width: 50px;
-    border: none;
-    outline: none;
-}
-.aside-filter__slider-input{
-    width: 95%;
-    padding: 8px 20px;
-    border: 1px solid #E0E0E0;
-    margin-bottom: 20px;
-    outline: none;
-    &::placeholder{
-        color: #BDBEC2;
-    }
 }
 .filter-btn__send{
     background: #F0F0F4;
@@ -389,9 +381,7 @@
     right: -2px;
     box-shadow: none;
     border: none;
-
 }
-
 .noUi-handle:after, .noUi-handle:before{
     display: none;
 }
@@ -408,7 +398,6 @@
         font-size: 14px;
         line-height: 17px;
         color: #48494D;
-        // margin-right: 10px;
         padding: 0;
         padding: 0;
         min-height: auto;
@@ -434,10 +423,10 @@
     border: none;
     margin-top: 0;
     transform: rotate(0);
-    right: 20px;
 }
 .aside-filter .choices[data-type*=select-one]:after{
     top: 7px;
+    right: 20px;
 }
 .choices[data-type*=select-one].is-open:after{
     margin-top: 0;

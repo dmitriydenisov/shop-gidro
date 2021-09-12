@@ -109,4 +109,10 @@ drop.forEach(el => {
     el.classList.toggle('filter__item-drop--active')
   });
 })
+const select = document.querySelectorAll('.catalog__filter-button');
+select.forEach(el => {
+  el.addEventListener('click', function(){
+    el.classList.add('catalog__filter-button--active')
+  });
+})
 
