@@ -114,7 +114,7 @@ html(lang="en")
                                                 .aside-filter__content
                                                     .aside-filter__content-box
                                                         label.aside-filter__label
-                                                            input.aside-filter__input(type="checkbox" checked)
+                                                            input.aside-filter__input(type="checkbox")
                                                             span.aside-filter__style
                                                             |В наличии
                                                     .aside-filter__content-box
@@ -127,7 +127,7 @@ html(lang="en")
                                                 .aside-filter__content.aside-filter__content--radio
                                                     .aside-filter__content-box
                                                         label.aside-filter__label
-                                                            input.aside-filter__input(name="radio" type="radio" checked)
+                                                            input.aside-filter__input(name="radio" type="radio")
                                                             span.aside-filter__style
                                                             |Все
                                                     .aside-filter__content-box
@@ -169,6 +169,32 @@ html(lang="en")
                                                     option(value="154") 154
                                                     option(value="230") 230
                                                     option(value="300") 300
+                                            li.aside-filter__item-list
+                                                p.filter__item-list Макс. скорость
+                                                select.filter__item-select
+                                                    option(value="90") 90
+                                                    option(value="130") 130
+                                                    option(value="154") 154
+                                                    option(value="230") 230
+                                                    option(value="300") 300
+                                            li.aside-filter__item-drop
+                                                p.aside-filter__item-title.filter__item-drop.filter__item-drop--active Бренд
+                                                .aside-filter__content
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style.aside-filter__style--check
+                                                            |BRP
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style.aside-filter__style--check
+                                                            |Spark 2
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style.aside-filter__style--check
+                                                            |Spark 3
                                 .tabs-content.aside-filter__tabs-content#model фильтр по модели
                     .catalog__inner-list
                         .product-item__wrapper

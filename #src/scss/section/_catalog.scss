@@ -135,6 +135,23 @@
     &__content-box{
         width: 50%;
     }
+    &__item-list{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 26px;
+        padding-bottom: 6px;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 95%;
+            height: 2px;
+            background-color: #C4C4C4;
+            left: 0;
+            bottom: 0;
+        }
+    }
     .filter__item-drop{
         position: relative;
         &:before{
@@ -185,6 +202,9 @@
         margin-left: -20px;
         top: 0;
     }
+}
+.filter__item-select{
+    margin-right: 10px;
 }
 .aside-filter__input:checked + .aside-filter__style{
     background-color: #1C62CD;
@@ -237,7 +257,6 @@
 }
 .noUi-target{
     height: 3px;
-    // border: 3px solid ;
     background-color: #E0E0E0;
 }
 .noUi-connect{
@@ -260,19 +279,56 @@
 }
 
 .choices{
-    // width: 35px;
     &__inner{
         background-color: transparent;
         border: none;
         outline: none;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
         font-size: 14px;
         line-height: 17px;
         color: #48494D;
+        // margin-right: 10px;
+        padding: 0;
+        padding: 0;
+        min-height: auto;
+        height: 25px;
+        width: 68px;
     }
+}
+.choices__list--single{
+    padding: 0;
+}
+.choices__list--dropdown{
+    width: 100px;
+}
+.choices__list--dropdown .choices__item--selectable{
+    padding-right: 0;
 }
 .is-open .choices__inner{
     background: #FFFFFF;
-    border: 1px solid #E0E0E0;
+}
+.choices[data-type*=select-one]:after{
+    background-image: url(../img/drop-down.svg);
+    width: 12px;
+    height: 8px;
+    border: none;
+    margin-top: 0;
+    transform: rotate(0);
+    top: 7px;
+    right: 20px;
+}
+.choices[data-type*=select-one].is-open:after{
+    margin-top: 0;
+    transform:  rotate(180deg);
+}
+.choices__list--dropdown{
+    width: 68px;
+    left: 0px;
+    font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
 }
 .choices__list--dropdown .choices__item--selectable.is-highlighted:after{
     display: none;
@@ -282,6 +338,7 @@
 }
 .aside-filter__item-list{
     display: flex;
+    justify-content: space-between;
 }
 
 input::-webkit-outer-spin-button,

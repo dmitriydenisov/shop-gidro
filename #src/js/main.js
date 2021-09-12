@@ -92,8 +92,14 @@ function onTabCkick(item){
 }
 //.filter__item-drop
 
-const drop = document.querySelector('.filter__item-drop');
+const drop = document.querySelectorAll('.filter__item-drop');
 
-drop.addEventListener('click', function(){
-  drop.classList.toggle('filter__item-drop--active')
+
+
+
+drop.forEach(el => {
+  el.addEventListener('click', function(){
+    el.classList.toggle('filter__item-drop--active')
+  });
 })
+
