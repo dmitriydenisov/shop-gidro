@@ -74,7 +74,7 @@ html(lang="en")
                         button BRP
                         button еще
                     .catalog__filter-btn
-                        select
+                        select.catalog__filter-select
                             option(value="По популярности") По популярности
                             option(value="По убыванию цены") По убыванию цены
                             option(value="По возрастанию цены") По возрастанию цены
@@ -148,11 +148,11 @@ html(lang="en")
                                                             label.aside-filter__slider-label
                                                                 span.aside-filter__slider-text от
                                                                 span.input
-                                                                    input.aside-filter__slider-input#input0(type="number" placeholder="100000" min="100000"  max="500000")
+                                                                    input.aside-filter__slider-inputPrice#input0(type="number" placeholder="100000" min="100000"  max="500000")
                                                             label.aside-filter__slider-label
                                                                 span.aside-filter__slider-text до
                                                                 span.input
-                                                                    input.aside-filter__slider-input#input1(type="number" placeholder="500000" min="100000"  max="500000")
+                                                                    input.aside-filter__slider-inputPrice#input1(type="number" placeholder="500000" min="100000"  max="500000")
                                             li.aside-filter__item-list
                                                 p.filter__item-list Мощность, л.с.
                                                 select.filter__item-select
@@ -195,6 +195,87 @@ html(lang="en")
                                                             input.aside-filter__input(type="checkbox")
                                                             span.aside-filter__style.aside-filter__style--check
                                                             |Spark 3
+                                                    .watch-more
+                                                        button.watch-more__btn Показать еще
+                                            li.aside-filter__item-drop
+                                                p.aside-filter__item-title.filter__item-drop.filter__item-drop--active Модель
+                                                .aside-filter__content
+                                                    input.aside-filter__slider-input(type="text" placeholder="Введите модель")
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style.aside-filter__style--check
+                                                            |Sea-doo Spark 2
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style.aside-filter__style--check
+                                                            |SeaDoo Spark 90 
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style.aside-filter__style--check
+                                                            |SeaDoo GTI 155
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style.aside-filter__style--check
+                                                            |SeaDoo GTR 230
+                                                    .watch-more
+                                                        button.watch-more__btn Показать еще
+                                            li.aside-filter__item-drop.btn-sale
+                                                p.aside-filter__item-title.filter__item-drop.filter__item-drop--active Акции
+                                                .aside-filter__content
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style
+                                                            span.btn-sale__text SALE
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style
+                                                            span.btn-sale__text NEW
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style
+                                                            span.btn-sale__text HIT
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style
+                                                            span.btn-sale__text ДИЛЕР
+                                            li.aside-filter__item-drop
+                                                p.aside-filter__item-title.filter__item-drop.filter__item-drop--active Страны
+                                                .aside-filter__content
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style.aside-filter__style--check
+                                                            |Россия
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style.aside-filter__style--check
+                                                            |Германия
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style.aside-filter__style--check
+                                                            |Китай
+                                                    .aside-filter__content-box
+                                                        label.aside-filter__label
+                                                            input.aside-filter__input(type="checkbox")
+                                                            span.aside-filter__style.aside-filter__style--check
+                                                            |CША
+                                                    .watch-more
+                                                        button.watch-more__btn Показать еще
+                                            li.aside-filter__item-drop.aside-filter__item-btn
+                                                button.filter-btn__send.filter-btn__send--active(type="submit") ВЫБРАТЬ
+                                                p.filter__extra Дополнительные параметры
+                                                .filter__extra-content more
+                                                button.filter-btn__reset(type="submit") Сбросить фильтр
                                 .tabs-content.aside-filter__tabs-content#model фильтр по модели
                     .catalog__inner-list
                         .product-item__wrapper

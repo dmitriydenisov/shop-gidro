@@ -33,30 +33,33 @@ if(rangeSlider){
     range: {
         'min': [100000],
         'max': [500000]
-  }
-});
-
-const input0 = document.getElementById('input0');
-const input1 = document.getElementById('input1');
-const inputs = [input0, input1];
-
-  rangeSlider.noUiSlider.on('update', function(values, handle){
-    inputs[handle].value = Math.round(values[handle]);
+    }
   });
-  const setRangeSlider =  (i, value) => {
-    let arr = [null, null];
-    arr[i] = value;
-    rangeSlider.noUiSlider.set(arr);
-  };
 
-    inputs.forEach((el, index) => {
-      el.addEventListener('change', (e) =>{
-        setRangeSlider(index, e.currentTarget.value)
-      });
+  const input0 = document.getElementById('input0');
+  const input1 = document.getElementById('input1');
+  const inputs = [input0, input1];
+
+    rangeSlider.noUiSlider.on('update', function(values, handle){
+      inputs[handle].value = Math.round(values[handle]);
+      
+    });
+    const setRangeSlider =  (i, value) => {
+      let arr = [null, null];
+      arr[i] = value;
+      rangeSlider.noUiSlider.set(arr);
+      
+    };
+
+      inputs.forEach((el, index) => {
+        el.addEventListener('change', (e) =>{
+          setRangeSlider(index, e.currentTarget.value)
+          
+        });
     });
 }
 
-const element = document.querySelectorAll('.filter__item-select');
+const element = document.querySelectorAll('.filter__item-select, .catalog__filter-select');
 element.forEach(el => {
   const choices = new Choices(el, {
     searchEnabled: false,
@@ -90,13 +93,17 @@ function onTabCkick(item){
     }
   });
 }
-//.filter__item-drop
 
-const drop = document.querySelectorAll('.filter__item-drop');
+//скрипт добавления в избранное
+const favorite = document.querySelectorAll('.product-item__favorite');
+favorite.forEach(el => {
+  el.addEventListener('click', function(){
+    el.classList.toggle('product-item__favorite--active')
+  });
+});
 
-
-
-
+//скрипт фильтра
+const drop = document.querySelectorAll('.filter__item-drop, .filter__extra');
 drop.forEach(el => {
   el.addEventListener('click', function(){
     el.classList.toggle('filter__item-drop--active')
