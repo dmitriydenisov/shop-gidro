@@ -109,10 +109,32 @@ drop.forEach(el => {
     el.classList.toggle('filter__item-drop--active')
   });
 })
+//скрипт изменения вида
 const select = document.querySelectorAll('.catalog__filter-button');
-select.forEach(el => {
-  el.addEventListener('click', function(){
-    el.classList.add('catalog__filter-button--active')
-  });
-})
 
+select.forEach(onView);
+
+function onView(el){
+  el.addEventListener('click', function(){
+    if(!el.classList.contains('catalog__filter-button--active')){
+      select.forEach(function(el){
+        el.classList.remove('catalog__filter-button--active');
+      });
+
+    const line = document.querySelector('.catalog__filter-btnline');
+    const lineActive = line.getElementsByClassName('catalog__filter-button--active');
+    const filterBtn = document.querySelectorAll('.product-item__wrapper');
+
+    function addActiveLine(item){
+      if(lineActive){
+        item.classList.add('product-item__wrapper--list');
+      }else{
+        item.classList.remove('product-item__wrapper--list');
+        console.log('done');
+      }
+    }
+    filterBtn.forEach(addActiveLine);
+  };
+  el.classList.add('catalog__filter-button--active')
+  });
+}
