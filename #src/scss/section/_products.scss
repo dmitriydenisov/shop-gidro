@@ -51,8 +51,12 @@
     &-item__wrapper{
         position: relative;
         width: 271px;
+        transition: all .3s;
         &--list{
             width: 100%;
+            .product-item{
+                width: 100%;
+            }
         }
     }
     &-item{

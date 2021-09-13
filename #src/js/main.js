@@ -121,14 +121,15 @@ function onView(el){
         el.classList.remove('catalog__filter-button--active');
       });
 
-    const line = document.querySelector('.catalog__filter-btnline');
-    const lineActive = line.getElementsByClassName('catalog__filter-button--active');
+    let line = document.querySelector('.catalog__filter-btnline');
+    let lineActive = line.getElementsByClassName('catalog__filter-button--active');
     const filterBtn = document.querySelectorAll('.product-item__wrapper');
 
     function addActiveLine(item){
-      if(lineActive){
+      if(line + 'catalog__filter-button--active'){
         item.classList.add('product-item__wrapper--list');
-      }else{
+      }
+      if(!(line + 'catalog__filter-button--active')){
         item.classList.remove('product-item__wrapper--list');
         console.log('done');
       }
