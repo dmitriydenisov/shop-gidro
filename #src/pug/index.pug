@@ -67,19 +67,19 @@ html(lang="en")
                                     img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                             .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                                    img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                             .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                                    img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                             .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                                    img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                             .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                                    img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                             .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                                    img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                         .swiper-prev
                             img(src="img/arrow-left.svg", alt="")
                         .swiper-next
@@ -98,11 +98,11 @@ html(lang="en")
         section.search
             .container 
                 .search__inner 
-                    .search__tabs 
+                    .tabs.search__tabs(data-search) 
                         button.tab.search__tabs-item.tab--active(data-tab="#tab_1") Поиск по  номеру
                         button.tab.search__tabs-item(data-tab="#tab_2") Поиск по марке
                         button.tab.search__tabs-item(data-tab="#tab_3") Поиск по названию товара
-                    .search__content
+                    .tab-container.search__content(data-search)
                         .tabs-content.search__content-item.tabs-content--active#tab_1
                             form.search__content-form
                                 input.search__content-input(type="text" placeholder="Введите номер")

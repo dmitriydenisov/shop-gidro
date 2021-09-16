@@ -42,19 +42,16 @@ if(rangeSlider){
 
     rangeSlider.noUiSlider.on('update', function(values, handle){
       inputs[handle].value = Math.round(values[handle]);
-      
     });
     const setRangeSlider =  (i, value) => {
       let arr = [null, null];
       arr[i] = value;
       rangeSlider.noUiSlider.set(arr);
-      
     };
 
       inputs.forEach((el, index) => {
         el.addEventListener('change', (e) =>{
           setRangeSlider(index, e.currentTarget.value)
-          
         });
     });
 }

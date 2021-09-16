@@ -1,0 +1,34 @@
+.product-card{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img-box{
+        width: 500px;
+        padding-top: 65px;
+        text-align: center;
+    }
+    &__price-old{
+        font-family: 'Barlow', sans-serif;
+        font-size: 30px;
+        line-height: 36px;
+        color: rgba(#000000, .6);
+    }
+    &__price-new{
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        color: #2F3035;
+        margin: 6px 0 16px;
+
+    }
+    &__link{
+        font-size: 15px;
+        line-height: 18px;
+        color: #1C62CD;
+    }
+    &__content{
+        width: 570px;
+    }
+}
