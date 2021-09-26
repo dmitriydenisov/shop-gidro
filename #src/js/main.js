@@ -99,6 +99,18 @@ favorite.forEach(el => {
   });
 });
 
+//скрипт добавления в избранное в карточке товара
+const favoriteCard = document.querySelector('.product-card__icon--favorite');
+favoriteCard.addEventListener('click', function(){
+  favoriteCard.classList.toggle('product-card__icon--favorite--active');
+});
+
+//скрипт добавления товара к сравнинию
+const compresion = document.querySelector('.product-card__icon--compresion')
+compresion.addEventListener('click', function(){
+  compresion.classList.toggle('product-card__icon--compresion--active')
+});
+
 //скрипт фильтра
 const drop = document.querySelectorAll('.filter__item-drop, .filter__extra');
 drop.forEach(el => {
@@ -132,4 +144,103 @@ function onView(el){
   }
   filterBtn.forEach(addActiveLine);
   });
+}
+//скрипт рейтинга
+const ratings = document.querySelectorAll('.rating');
+
+if(ratings.length > 0){
+  initRatings();
+  
+}
+
+function initRatings() {
+
+  let ratingActive, ratingValue;
+  //обходим все рейтинги на странице
+  for(let i = 0; i < ratings.length; i++) {
+    const rating = ratings[i];
+    initRatings(rating);
+  }
+  //инициализируем конкретный рейтинг
+  function initRatings(rating) {
+    initRatingVars(rating);
+    setRatingActiveWidth();
+
+    if(rating.classList.contains('rating__set')) {
+      setRating(rating);
+    }
+  }
+
+  //инициализация переменных
+  function initRatingVars(rating) {
+    ratingActive = rating.querySelector('.rating__active');
+    ratingValue = rating.querySelector('.rating__value');
+  }
+  //изменение ширины активных звезд
+  function setRatingActiveWidth(i = ratingValue.innerHTML) {
+    const ratingActiveWidth = i / 0.05;
+    ratingActive.style.width = `${ratingActiveWidth}%`
+  }
+  //указваем оценку
+  function setRating(rating) {
+    const ratingItems = rating.querySelectorAll('.rating__item');
+    
+    for (let i = 0; i < ratingItems.length; i++) {
+      const ratingItem = ratingItems[i];
+      ratingItem.addEventListener('mouseenter', function (e) {
+        //Обновление данных
+        initRatingVars(rating);
+        //обновление активной звезды
+        setRatingActiveWidth(ratingItem.value);
+      });
+      
+      ratingItem.addEventListener('mouseleave', function (e) {
+        //обновление активной звезды
+        setRatingActiveWidth();
+      });
+
+      ratingItem.addEventListener('click', function (e) {
+        //Обновление данных
+        initRatingVars(rating);
+        if(rating.dataset.ajax) {
+          //"Отправить" на сервер
+          setRatingValue(ratingItem.value, rating);
+        } else {
+          //Отобразить указаную оценку
+          ratingValue.innerHTML = i + 1;
+          setRatingActiveWidth();
+        }
+        //обновление активной звезды
+        setRatingActiveWidth(ratingItem.value);
+      });
+    }
+  }
+  async function setRatingValue(value, rating) {
+    if(!rating.classList.contains('rating__sending')) {
+      rating.classList.add('rating__sending');
+
+      //отправка данных (value) на сервер
+      let response = await fetch('rating.json', {
+        method: 'GET',
+        //body: JSON.stringify({
+        //userRating: value
+        //}),
+        //headers: {
+        //'content-type': 'application/json'
+        //}        
+      });
+      if (response.ok) {
+        //Получаем новый рейтинг
+        const result = await response.json();
+        //вывод нового среднего результата
+        ratingValue.innerHTML = result.newRating;
+        //обновление активных звезд
+        setRatingActiveWidth();
+        rating.classList.remove('rating__sending');
+      } else {
+        alert('Error send');
+        rating.classList.remove('rating__sending');
+      }
+    }
+  }
 }

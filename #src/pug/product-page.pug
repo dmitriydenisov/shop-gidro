@@ -76,16 +76,26 @@ html(lang="en")
                         h1.product-card__title Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic
                         p.product-card__code Код товара: 366666-2 
                         .product-card__buttons
-                            button.product-card__icon-favorite
-                                img(src="img/favorite.svg", alt="")
-                            button.product-card__icon-compresion
-                                img(src="img/compresion.svg", alt="")
-                            .rate
-                              |star
-                              |star
-                              |star
-                              |star
-                              |star
+                            button.product-card__icon.product-card__icon--favorite
+                                //- img(src="img/favorite.svg", alt="")
+                            button.product-card__icon.product-card__icon--compresion
+                                //- img(src="img/compresion.svg", alt="")
+                                <svg width="20" height="28" viewBox="0 0 20 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="16" y="15.7708" width="4" height="11.7255" rx="2" />
+                                    <rect x="8" y="0.527588" width="4" height="26.9687" rx="2" />
+                                    <rect y="9.90796" width="4" height="17.5883" rx="2" />
+                                </svg>
+
+                            .rating.rating__set(data-ajax="true")
+                                .rating__body 
+                                    .rating__active
+                                    .rating__items
+                                        input.rating__item(type="radio" value="1" name="rating")
+                                        input.rating__item(type="radio" value="2" name="rating")
+                                        input.rating__item(type="radio" value="3" name="rating")
+                                        input.rating__item(type="radio" value="4" name="rating")
+                                        input.rating__item(type="radio" value="5" name="rating")
+                                    .rating__value 4.5
                         .tabs-wrapper.product-card__tabs
                             .tabs
                                 button.tab.product-card__tab.tab--active(data-tab="#parametrs") Характеристики

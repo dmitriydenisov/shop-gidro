@@ -116,6 +116,11 @@ function js() {
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream())
 }
+// function json () {
+//   return src(path.src.json)
+//     .pipe(dest(path.build.json))
+//     .pipe(src(path.src.json))
+// };
 
 function images() {
   return src(path.src.img)
@@ -189,6 +194,7 @@ exports.images = images;
 exports.js = js;
 exports.css = css;
 exports.html = html;
+// exports.json = json;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
