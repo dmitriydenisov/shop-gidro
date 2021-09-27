@@ -141,10 +141,12 @@ html(lang="en")
                                                 |Магазин
                                                 input.card__input-search(type="text")
                                             label.card__input-pickup
-                                                input(type="radio")
+                                                input(type="radio" name="pickup")
+                                                span.card__style
                                                 |Забрать сегодня
                                             label.card__input-pickup
-                                                input(type="radio")
+                                                input(type="radio" name="pickup" checked)
+                                                span.card__style
                                                 |Забрать в течение недели
                                         ul.card__list
                                             li.card__list-item
