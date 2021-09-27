@@ -1,0 +1,27 @@
+.card__tabs{
+    &-box{
+        background: #F0F0F4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 22px 0;
+        margin-bottom: 50px;
+    }
+}
+.card__tab{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.card__tab{
+    font-size: 20px;
+    line-height: 24px;
+    color: #2F3035;
+    opacity: 0.6;
+}
+.card__tab.tab--active{
+    opacity: 1;
+    cursor: inherit;
+    border-bottom: 2px solid #1C62CD;
+}
