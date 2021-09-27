@@ -94,11 +94,13 @@
 
 }
 .card__list-workhours{
-    width: 170px;
-    margin-right: 80px;
-    span{
-        display: block;
-    }
+    width: 160px;
+    margin-right: 95px;
+    
+}
+.workhours{
+    display: flex;
+    justify-content: space-between;
 }
 .card__list-avialable{
     width: 140px;
