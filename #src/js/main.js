@@ -63,33 +63,44 @@ element.forEach(el => {
   });
 })
 
+//скрипт мобильного меню
+const mobileBtn = document.querySelector('.menu__btn');
+const mobileMenu = document.querySelector('.menu-mobile__list');
+mobileBtn.addEventListener('click', function(){
+  mobileMenu.classList.toggle('menu-mobile__list--active')
+})
 
 // табы
-const tabsBtn = document.querySelectorAll('.tab');
-const tabsItems = document.querySelectorAll('.tabs-content');
+const tabPanels = document.querySelectorAll('.panel__tabs');
 
-tabsBtn.forEach(onTabCkick);
+tabPanels.forEach(tabPanel => {
+  const tabsBtn = tabPanel.querySelectorAll('.tab');
+  const tabsItems = tabPanel.querySelectorAll('.tabs-content');
 
-function onTabCkick(item){  
-  item.addEventListener('click', function(){
+  tabsBtn.forEach(onTabCkick);
 
-    let tabId = item.getAttribute('data-tab');
-    let currentTab = document.querySelector(tabId);
+  function onTabCkick(item){  
+    item.addEventListener('click', function(){
 
-    if(!item.classList.contains('tab--active')){
-      tabsBtn.forEach(function(item){
-        item.classList.remove('tab--active');
-      });
+      let tabId = item.getAttribute('data-tab');
+      let currentTab = tabPanel.querySelector(tabId);
 
-      tabsItems.forEach(function(item){
-        item.classList.remove('tabs-content--active');
-      });
+      if(!item.classList.contains('tab--active')){
+        tabsBtn.forEach(function(item){
+          item.classList.remove('tab--active');
+        });
 
-      item.classList.add('tab--active');
-      currentTab.classList.add('tabs-content--active');
-    }
-  });
-}
+        tabsItems.forEach(function(item){
+          item.classList.remove('tabs-content--active');
+        });
+
+        item.classList.add('tab--active');
+        currentTab.classList.add('tabs-content--active');
+      };
+    });
+  };
+});
+
 
 //скрипт добавления в избранное
 const favorite = document.querySelectorAll('.product-item__favorite');
@@ -101,15 +112,17 @@ favorite.forEach(el => {
 
 //скрипт добавления в избранное в карточке товара
 const favoriteCard = document.querySelector('.product-card__icon--favorite');
+if(favoriteCard){
 favoriteCard.addEventListener('click', function(){
   favoriteCard.classList.toggle('product-card__icon--favorite--active');
-});
+});}
 
 //скрипт добавления товара к сравнинию
 const compresion = document.querySelector('.product-card__icon--compresion')
+if(compresion){
 compresion.addEventListener('click', function(){
   compresion.classList.toggle('product-card__icon--compresion--active')
-});
+});}
 
 //скрипт фильтра
 const drop = document.querySelectorAll('.filter__item-drop, .filter__extra');

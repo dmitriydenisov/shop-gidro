@@ -16,6 +16,10 @@ html(lang="en")
                 .container
                     .header__top-inner
                         nav.menu
+                            button.menu__btn
+                                .menu__btn-line
+                                .menu__btn-line
+                                .menu__btn-line
                             ul.menu__list
                                 li.menu__item
                                     a.menu__link(href="#") Магазины
@@ -38,6 +42,59 @@ html(lang="en")
                                     a.user-list__link.basket(href="#")
                                         img.user-list__img(src="img/basket.svg", alt="")
                                         p.basket__num 1
+            ul.menu-mobile__list 
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/user.svg", alt="")
+                        p Войти
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/user.svg", alt="")
+                        p Регистрация
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/heart.svg", alt="")
+                        p Избранное
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/basket.svg", alt="")
+                        p Корзина
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/shop.svg", alt="")
+                        p Магазины
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/sale.svg", alt="")
+                        p Акции
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/div.svg", alt="")
+                        p Доставка и оплата
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Квадроциклы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Катера
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Гидроциклы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Лодки
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Вездеходы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Снегоходы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Двигатели
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Запчасти
             .header__bottom
                 .container
                     ul.menu-categories
@@ -98,7 +155,7 @@ html(lang="en")
         section.search
             .container 
                 .search__inner 
-                    .tabs.search__tabs(data-search) 
+                    .tabs.search__tabs.panel__tabs(data-search="") 
                         button.tab.search__tabs-item.tab--active(data-tab="#tab_1") Поиск по  номеру
                         button.tab.search__tabs-item(data-tab="#tab_2") Поиск по марке
                         button.tab.search__tabs-item(data-tab="#tab_3") Поиск по названию товара
@@ -159,7 +216,7 @@ html(lang="en")
                 .products__inner
                     h3.title Популярные товары
                     .tabs-wrapper
-                        .tabs.products__tabs
+                        .tabs.products__tabs.panel__tabs
                             button.tab.tab--active.products__tab(data-tab="#product-tab-4") запчасти
                             button.tab.products__tab(data-tab="#product-tab-5") моторы
                             button.tab.products__tab(data-tab="#product-tab-6") шины
@@ -610,7 +667,7 @@ html(lang="en")
                 .products__inner
                     h3.title С этими товарами покупают
                     .tabs-wrapper
-                        .tabs.products__tabs
+                        .tabs.products__tabs.panel__tabs
                             button.tab.tab--active.products__tab(data-tab="#popular-tab-4") запчасти
                             button.tab.products__tab(data-tab="#popular-tab-5") моторы
                             button.tab.products__tab(data-tab="#popular-tab-6") шины
