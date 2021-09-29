@@ -66,40 +66,69 @@ element.forEach(el => {
 //скрипт мобильного меню
 const mobileBtn = document.querySelector('.menu__btn');
 const mobileMenu = document.querySelector('.menu-mobile__list');
+if(mobileBtn){
 mobileBtn.addEventListener('click', function(){
   mobileMenu.classList.toggle('menu-mobile__list--active')
-})
+})}
 
 // табы
-const tabPanels = document.querySelectorAll('.panel__tabs');
+const tabs = document.querySelectorAll('.tab');
 
-tabPanels.forEach(tabPanel => {
-  const tabsBtn = tabPanel.querySelectorAll('.tab');
-  const tabsItems = tabPanel.querySelectorAll('.tabs-content');
+tabs.forEach((tab) => tab.addEventListener('click', labelClickHandler));
 
-  tabsBtn.forEach(onTabCkick);
+function labelClickHandler (){
+  if (this.classList.contains('tab--active')) {
+		return;
+	}
+  const segment = this.closest('.panel__tabs');
+  if (!segment) {
+		return;
+	}
+  const tabsBtn = segment.querySelectorAll('.tab');
+  tabsBtn.forEach((tab) => tab.classList.remove('tab--active'));
+  this.classList.add('tab--active');
 
-  function onTabCkick(item){  
-    item.addEventListener('click', function(){
+  const items = segment.querySelectorAll(".tabs-content");
+	items.forEach((label) => label.classList.remove("tabs-content--active"));
 
-      let tabId = item.getAttribute('data-tab');
-      let currentTab = tabPanel.querySelector(tabId);
+  const item = segment.querySelector(
+		`.tabs-content[data-tab="${this.dataset.tab}"]`
+	);
 
-      if(!item.classList.contains('tab--active')){
-        tabsBtn.forEach(function(item){
-          item.classList.remove('tab--active');
-        });
 
-        tabsItems.forEach(function(item){
-          item.classList.remove('tabs-content--active');
-        });
+	if (item) {
+		item.classList.add("tabs-content--active");
+	}
 
-        item.classList.add('tab--active');
-        currentTab.classList.add('tabs-content--active');
-      };
-    });
-  };
-});
+  // const labels = segment.querySelectorAll(".tab_label");
+	// labels.forEach((label) => label.classList.remove("tab_label--active"));
+	// this.classList.add("tab_label--active");
+  
+  // const tabsItems = tabPanel.querySelectorAll('.tabs-content');
+
+  // tabsBtn.forEach(onTabCkick);
+
+  // function onTabCkick(item){  
+  //   item.addEventListener('click', function(){
+
+  //     let tabId = item.getAttribute('data-tab');
+  //     let currentTab = tabPanel.querySelector(tabId);
+
+  //     if(!item.classList.contains('tab--active')){
+  //       tabsBtn.forEach(function(item){
+  //         item.classList.remove('tab--active');
+  //       });
+
+  //       tabsItems.forEach(function(item){
+  //         item.classList.remove('tabs-content--active');
+  //       });
+
+  //       item.classList.add('tab--active');
+  //       currentTab.classList.add('tabs-content--active');
+  //     };
+  //   });
+  // };
+}
 
 
 //скрипт добавления в избранное

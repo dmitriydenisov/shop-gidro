@@ -93,12 +93,12 @@ html(lang="en")
                                         input.rating__item(type="radio" value="4" name="rating")
                                         input.rating__item(type="radio" value="5" name="rating")
                                     .rating__value 4.5
-                        .tabs-wrapper.product-card__tabs
+                        .tabs-wrapper.product-card__tabs.panel__tabs
                             .tabs
-                                button.tab.product-card__tab.tab--active(data-tab="#parametrs") Характеристики
-                                button.tab.product-card__tab(data-tab="#nal") Наличие в магазине
+                                button.tab.product-card__tab.tab--active(data-tab="parametrs") Характеристики
+                                button.tab.product-card__tab(data-tab="nal") Наличие в магазине
                             .tabs-container
-                                .tabs-content.product-card__tab-content#parametrs.tabs-content--active
+                                .tabs-content.product-card__tab-content.tabs-content--active(data-tab="parametrs")
                                     ul.product-card__list 
                                         li.product-card__item 
                                             .product-card__item-left Производитель
@@ -118,23 +118,23 @@ html(lang="en")
                                     a.product-card__more(href="#") Показать еще
                                     .product-card__btn
                                         button купить
-                                .tabs-content.product-card__tab-content#nal content-2
+                                .tabs-content.product-card__tab-content(data-tab="nal") content-2
         section.card__tabs
             .container
-                 .tabs-wrapper.card__tabs
+                 .tabs-wrapper.card__tabs.panel__tabs
                             .tabs.card__tabs-box
-                                button.tab.card__tab(data-tab="#about") Характеристики
-                                button.tab.card__tab(data-tab="#settings") Наличие в магазине
-                                button.tab.card__tab(data-tab="#reviews") Отзывы
-                                button.tab.card__tab.tab--active(data-tab="#pickup") Самовывоз
-                                button.tab.card__tab(data-tab="#delivery") Доставка
-                                button.tab.card__tab(data-tab="#service") Cервис
-                                button.tab.card__tab(data-tab="#warranty") Гарантия
+                                button.tab.card__tab(data-tab="about") Характеристики
+                                button.tab.card__tab(data-tab="settings") Наличие в магазине
+                                button.tab.card__tab(data-tab="reviews") Отзывы
+                                button.tab.card__tab.tab--active(data-tab="pickup") Самовывоз
+                                button.tab.card__tab(data-tab="delivery") Доставка
+                                button.tab.card__tab(data-tab="service") Cервис
+                                button.tab.card__tab(data-tab="warranty") Гарантия
                             .tabs-container
-                                .tabs-content.card__tab-content#about content-1
-                                .tabs-content.card__tab-content#settings content-2
-                                .tabs-content.card__tab-content#reviews content-3
-                                .tabs-content.card__tab-content#pickup.tabs-content--active
+                                .tabs-content.card__tab-content(data-tab="about") content-1
+                                .tabs-content.card__tab-content(data-tab="settings") content-2
+                                .tabs-content.card__tab-content(data-tab="reviews") content-3
+                                .tabs-content.card__tab-content.tabs-content--active(data-tab="pickup")
                                     form
                                         .card__top-line
                                             label.card__label-search
@@ -207,23 +207,23 @@ html(lang="en")
                                                 .card__list-num 0
                                                 .card__list-btn
                                                     button(type="submit") купить
-                                .tabs-content.card__tab-content#delivery content-5
-                                .tabs-content.card__tab-content#service content-6
-                                .tabs-content.card__tab-content#warranty content-7
+                                .tabs-content.card__tab-content(data-tab="delivery") content-5
+                                .tabs-content.card__tab-content(data-tab="service") content-6
+                                .tabs-content.card__tab-content(data-tab="warranty") content-7
         section.products
             .container 
                 .products__inner
                     h3.title С этими товарами покупают
-                    .tabs-wrapper
+                    .tabs-wrapper.panel__tabs
                         .tabs.products__tabs
-                            button.tab.tab--active.products__tab(data-tab="#popular-tab-4") запчасти
-                            button.tab.products__tab(data-tab="#popular-tab-5") моторы
-                            button.tab.products__tab(data-tab="#popular-tab-6") шины
-                            button.tab.products__tab(data-tab="#popular-tab-7") электроника
-                            button.tab.products__tab(data-tab="#popular-tab-8") инструменты
-                            button.tab.products__tab(data-tab="#popular-tab-9") аксессуары
+                            button.tab.tab--active.products__tab(data-tab="popular-4") запчасти
+                            button.tab.products__tab(data-tab="popular-5") моторы
+                            button.tab.products__tab(data-tab="popular-6") шины
+                            button.tab.products__tab(data-tab="popular-7") электроника
+                            button.tab.products__tab(data-tab="popular-8") инструменты
+                            button.tab.products__tab(data-tab="popular-9") аксессуары
                         .tab-container.products__container
-                            .tabs-content.product__content.tabs-content--active#popular-tab-4
+                            .tabs-content.product__content.tabs-content--active(data-tab="popular-4")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -295,7 +295,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#popular-tab-5
+                            .tabs-content.product__content(data-tab="popular-5")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -367,7 +367,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#popular-tab-6
+                            .tabs-content.product__content(data-tab="popular-6")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -439,7 +439,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#popular-tab-7
+                            .tabs-content.product__content(data-tab="popular-7")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -511,7 +511,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#popular-tab-8
+                            .tabs-content.product__content(data-tab="popular-8")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -583,7 +583,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#popular-tab-9
+                            .tabs-content.product__content(data-tab="popular-9")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
