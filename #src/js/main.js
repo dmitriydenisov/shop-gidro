@@ -42,19 +42,16 @@ if(rangeSlider){
 
     rangeSlider.noUiSlider.on('update', function(values, handle){
       inputs[handle].value = Math.round(values[handle]);
-      
     });
     const setRangeSlider =  (i, value) => {
       let arr = [null, null];
       arr[i] = value;
       rangeSlider.noUiSlider.set(arr);
-      
     };
 
       inputs.forEach((el, index) => {
         el.addEventListener('change', (e) =>{
           setRangeSlider(index, e.currentTarget.value)
-          
         });
     });
 }
@@ -66,33 +63,73 @@ element.forEach(el => {
   });
 })
 
+//скрипт мобильного меню
+const mobileBtn = document.querySelector('.menu__btn');
+const mobileMenu = document.querySelector('.menu-mobile__list');
+if(mobileBtn){
+mobileBtn.addEventListener('click', function(){
+  mobileMenu.classList.toggle('menu-mobile__list--active')
+})}
 
 // табы
-const tabsBtn = document.querySelectorAll('.tab');
-const tabsItems = document.querySelectorAll('.tabs-content');
+const tabs = document.querySelectorAll('.tab');
 
-tabsBtn.forEach(onTabCkick);
+tabs.forEach((tab) => tab.addEventListener('click', labelClickHandler));
 
-function onTabCkick(item){  
-  item.addEventListener('click', function(){
+function labelClickHandler (){
+  if (this.classList.contains('tab--active')) {
+		return;
+	}
+  const segment = this.closest('.panel__tabs');
+  if (!segment) {
+		return;
+	}
+  const tabsBtn = segment.querySelectorAll('.tab');
+  tabsBtn.forEach((tab) => tab.classList.remove('tab--active'));
+  this.classList.add('tab--active');
 
-    let tabId = item.getAttribute('data-tab');
-    let currentTab = document.querySelector(tabId);
+  const items = segment.querySelectorAll(".tabs-content");
+	items.forEach((label) => label.classList.remove("tabs-content--active"));
 
-    if(!item.classList.contains('tab--active')){
-      tabsBtn.forEach(function(item){
-        item.classList.remove('tab--active');
-      });
+  const item = segment.querySelector(
+		`.tabs-content[data-tab="${this.dataset.tab}"]`
+	);
 
-      tabsItems.forEach(function(item){
-        item.classList.remove('tabs-content--active');
-      });
 
-      item.classList.add('tab--active');
-      currentTab.classList.add('tabs-content--active');
-    }
-  });
+	if (item) {
+		item.classList.add("tabs-content--active");
+	}
+
+  // const labels = segment.querySelectorAll(".tab_label");
+	// labels.forEach((label) => label.classList.remove("tab_label--active"));
+	// this.classList.add("tab_label--active");
+  
+  // const tabsItems = tabPanel.querySelectorAll('.tabs-content');
+
+  // tabsBtn.forEach(onTabCkick);
+
+  // function onTabCkick(item){  
+  //   item.addEventListener('click', function(){
+
+  //     let tabId = item.getAttribute('data-tab');
+  //     let currentTab = tabPanel.querySelector(tabId);
+
+  //     if(!item.classList.contains('tab--active')){
+  //       tabsBtn.forEach(function(item){
+  //         item.classList.remove('tab--active');
+  //       });
+
+  //       tabsItems.forEach(function(item){
+  //         item.classList.remove('tabs-content--active');
+  //       });
+
+  //       item.classList.add('tab--active');
+  //       currentTab.classList.add('tabs-content--active');
+  //     };
+  //   });
+  // };
 }
+
 
 //скрипт добавления в избранное
 const favorite = document.querySelectorAll('.product-item__favorite');
@@ -101,6 +138,20 @@ favorite.forEach(el => {
     el.classList.toggle('product-item__favorite--active')
   });
 });
+
+//скрипт добавления в избранное в карточке товара
+const favoriteCard = document.querySelector('.product-card__icon--favorite');
+if(favoriteCard){
+favoriteCard.addEventListener('click', function(){
+  favoriteCard.classList.toggle('product-card__icon--favorite--active');
+});}
+
+//скрипт добавления товара к сравнинию
+const compresion = document.querySelector('.product-card__icon--compresion')
+if(compresion){
+compresion.addEventListener('click', function(){
+  compresion.classList.toggle('product-card__icon--compresion--active')
+});}
 
 //скрипт фильтра
 const drop = document.querySelectorAll('.filter__item-drop, .filter__extra');
@@ -135,4 +186,103 @@ function onView(el){
   }
   filterBtn.forEach(addActiveLine);
   });
+}
+//скрипт рейтинга
+const ratings = document.querySelectorAll('.rating');
+
+if(ratings.length > 0){
+  initRatings();
+  
+}
+
+function initRatings() {
+
+  let ratingActive, ratingValue;
+  //обходим все рейтинги на странице
+  for(let i = 0; i < ratings.length; i++) {
+    const rating = ratings[i];
+    initRatings(rating);
+  }
+  //инициализируем конкретный рейтинг
+  function initRatings(rating) {
+    initRatingVars(rating);
+    setRatingActiveWidth();
+
+    if(rating.classList.contains('rating__set')) {
+      setRating(rating);
+    }
+  }
+
+  //инициализация переменных
+  function initRatingVars(rating) {
+    ratingActive = rating.querySelector('.rating__active');
+    ratingValue = rating.querySelector('.rating__value');
+  }
+  //изменение ширины активных звезд
+  function setRatingActiveWidth(i = ratingValue.innerHTML) {
+    const ratingActiveWidth = i / 0.05;
+    ratingActive.style.width = `${ratingActiveWidth}%`
+  }
+  //указваем оценку
+  function setRating(rating) {
+    const ratingItems = rating.querySelectorAll('.rating__item');
+    
+    for (let i = 0; i < ratingItems.length; i++) {
+      const ratingItem = ratingItems[i];
+      ratingItem.addEventListener('mouseenter', function (e) {
+        //Обновление данных
+        initRatingVars(rating);
+        //обновление активной звезды
+        setRatingActiveWidth(ratingItem.value);
+      });
+      
+      ratingItem.addEventListener('mouseleave', function (e) {
+        //обновление активной звезды
+        setRatingActiveWidth();
+      });
+
+      ratingItem.addEventListener('click', function (e) {
+        //Обновление данных
+        initRatingVars(rating);
+        if(rating.dataset.ajax) {
+          //"Отправить" на сервер
+          setRatingValue(ratingItem.value, rating);
+        } else {
+          //Отобразить указаную оценку
+          ratingValue.innerHTML = i + 1;
+          setRatingActiveWidth();
+        }
+        //обновление активной звезды
+        setRatingActiveWidth(ratingItem.value);
+      });
+    }
+  }
+  async function setRatingValue(value, rating) {
+    if(!rating.classList.contains('rating__sending')) {
+      rating.classList.add('rating__sending');
+
+      //отправка данных (value) на сервер
+      let response = await fetch('rating.json', {
+        method: 'GET',
+        //body: JSON.stringify({
+        //userRating: value
+        //}),
+        //headers: {
+        //'content-type': 'application/json'
+        //}        
+      });
+      if (response.ok) {
+        //Получаем новый рейтинг
+        const result = await response.json();
+        //вывод нового среднего результата
+        ratingValue.innerHTML = result.newRating;
+        //обновление активных звезд
+        setRatingActiveWidth();
+        rating.classList.remove('rating__sending');
+      } else {
+        alert('Error send');
+        rating.classList.remove('rating__sending');
+      }
+    }
+  }
 }

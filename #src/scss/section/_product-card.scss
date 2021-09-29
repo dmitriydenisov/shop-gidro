@@ -1,0 +1,218 @@
+.product-card{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img-box{
+        width: 500px;
+        padding-top: 65px;
+        text-align: center;
+        position: relative;
+    }
+    &__img-box:before{
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.12em;
+        padding: 13px 25px;
+        border-radius: 3px;
+    }
+    &__price-old{
+        display: inline-block;
+        font-family: 'Barlow', sans-serif;
+        font-size: 30px;
+        line-height: 45px;
+        color: rgba(#000000, .6);
+        background-image: url('../img/old-line.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__price-new{
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        color: #2F3035;
+        margin: 6px 0 16px;
+
+    }
+    &__link{
+        font-size: 15px;
+        line-height: 18px;
+        color: #1C62CD;
+    }
+    &__content{
+        width: 570px;
+    }
+    &__title{
+        font-family: 'SFProDisplay-Bold', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 10px;
+    }
+    &__code{
+        font-size: 15px;
+        line-height: 18px;
+        opacity: 0.6;
+        margin-bottom: 25px;
+    }
+    &__buttons{
+        display: flex;
+        margin-bottom: 50px;
+        align-items: center;
+    }
+    &__icon{
+        margin-right: 25px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    &__icon--favorite{
+        position: relative;
+        width: 24px;
+        height: 22px;
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 22px;
+            background-image: url('../img/favorite.svg');
+        }
+        &--active:before{
+            background-image: url('../img/favorite-active.svg');
+        }
+    }
+    &__icon--compresion{
+        svg{
+            fill:#2F3035;
+        }
+        &--active{
+            svg{
+                fill: #1C62CD;
+            }
+        }
+    }
+    &__tabs{
+    }
+    &__tab{
+        font-size: 20px;
+        line-height: 24px;
+        opacity: 0.6;
+        padding-bottom: 5px;
+        padding-right: 17px;
+        margin-bottom: 5px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        + &__tab{
+            padding-left: 17px;
+        }
+    }
+    &__tab.tab--active{
+        opacity: 1;
+        border-bottom: 2px solid #1C62CD;
+        font-family: 'SFProDisplay-Bold', sans-serif;
+        font-weight: 700;
+    }
+    &__list{
+        margin-bottom: 20px;
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding: 15px 0 6px;
+        border-bottom: 1px solid rgba(#2F3035, .1);
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &-left{
+            padding-right: 15px;
+        }
+        &-right{
+            width: 125px;
+        }
+    }
+    &__more{
+        font-size: 14px;
+        line-height: 17px;
+        color: #1C62CD;
+        border-bottom: 1px solid #1C62CD;
+        margin-bottom: 40px;
+    }
+    &__btn button{
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #1C62CD;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+        padding: 16px 53px;
+        cursor: pointer;
+    }
+}
+.rating{
+    display: flex;
+    font-size: 40px;
+    line-height: 0.75;
+    color: #C4C4C4;
+    &__body{
+        position: relative;
+        &:before{
+            content: "★★★★★";
+            display: block;
+        }
+    }
+    &__active{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    &:before{
+        content: "★★★★★";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: #1C62CD;
+    }
+    }
+    &__items{
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    &__item{
+        margin: 0;
+        flex: 0 0 20%;
+        height: 100%;
+        opacity: 0;
+    }
+    &__value{
+        display: none;
+    }
+    
+}
+.rating.rating__sending{
+    opacity: .2;
+}
+.rating.rating__set{
+    .rating__active,
+    .rating__item{
+        cursor: pointer;
+    }
+}

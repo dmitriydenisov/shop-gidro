@@ -97,14 +97,14 @@ html(lang="en")
                             </svg>
                 .catalog__inner
                     aside.catalog__inner-aside.aside-filter
-                        .tabs-wrapper
+                        .tabs-wrapper.panel__tabs
                             .tabs.aside-filter__tabs
-                                button.tab.aside-filter__tab.tab--active(data-tab="#parametrs")
+                                button.tab.aside-filter__tab.tab--active(data-tab="parametrs")
                                     span Параметры
-                                button.tab.aside-filter__tab(data-tab="#model")
+                                button.tab.aside-filter__tab(data-tab="model")
                                     span по марке
                             .tab-container
-                                .tabs-content.aside-filter__tabs-content.tabs-content--active#parametrs
+                                .tabs-content.aside-filter__tabs-content.tabs-content--active(data-tab="parametrs")
                                     form.aside-filter__form
                                         ul.aside-filter__list 
                                             li.aside-filter__item-drop
@@ -274,7 +274,7 @@ html(lang="en")
                                                 p.filter__extra Дополнительные параметры
                                                 .filter__extra-content more
                                                 button.filter-btn__reset(type="submit") Сбросить фильтр
-                                .tabs-content.aside-filter__tabs-content#model фильтр по модели
+                                .tabs-content.aside-filter__tabs-content(data-tab="model") фильтр по модели
                     .catalog__inner-list
                         .product-item__wrapper
                             button.product-item__favorite

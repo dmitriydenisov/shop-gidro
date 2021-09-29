@@ -16,6 +16,10 @@ html(lang="en")
                 .container
                     .header__top-inner
                         nav.menu
+                            button.menu__btn
+                                .menu__btn-line
+                                .menu__btn-line
+                                .menu__btn-line
                             ul.menu__list
                                 li.menu__item
                                     a.menu__link(href="#") Магазины
@@ -38,6 +42,59 @@ html(lang="en")
                                     a.user-list__link.basket(href="#")
                                         img.user-list__img(src="img/basket.svg", alt="")
                                         p.basket__num 1
+            ul.menu-mobile__list 
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/user.svg", alt="")
+                        p Войти
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/user.svg", alt="")
+                        p Регистрация
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/heart.svg", alt="")
+                        p Избранное
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/basket.svg", alt="")
+                        p Корзина
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/shop.svg", alt="")
+                        p Магазины
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/sale.svg", alt="")
+                        p Акции
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/div.svg", alt="")
+                        p Доставка и оплата
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Квадроциклы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Катера
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Гидроциклы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Лодки
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Вездеходы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Снегоходы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Двигатели
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        p Запчасти
             .header__bottom
                 .container
                     ul.menu-categories
@@ -67,19 +124,19 @@ html(lang="en")
                                     img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                             .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                                    img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                             .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                                    img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                             .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                                    img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                             .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                                    img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                             .banner-section__slide.swiper-slide
                                 a.banner-section__slider-item(href="#")
-                                    img.banner-section__slider-img(src="img/banner/banner-slide.jpg", alt="")
+                                    img.banner-section__slider-img(src="img/slider/slider-slide.jpg", alt="")
                         .swiper-prev
                             img(src="img/arrow-left.svg", alt="")
                         .swiper-next
@@ -97,21 +154,21 @@ html(lang="en")
                             span 31.08.2020
         section.search
             .container 
-                .search__inner 
-                    .search__tabs 
-                        button.tab.search__tabs-item.tab--active(data-tab="#tab_1") Поиск по  номеру
-                        button.tab.search__tabs-item(data-tab="#tab_2") Поиск по марке
-                        button.tab.search__tabs-item(data-tab="#tab_3") Поиск по названию товара
-                    .search__content
-                        .tabs-content.search__content-item.tabs-content--active#tab_1
+                .search__inner.panel__tabs
+                    .tabs.search__tabs
+                        button.tab.search__tabs-item.tab--active(data-tab="1") Поиск по  номеру
+                        button.tab.search__tabs-item(data-tab="2") Поиск по марке
+                        button.tab.search__tabs-item(data-tab="3") Поиск по названию товара
+                    .tab-container.search__content(data-search)
+                        .tabs-content.search__content-item.tabs-content--active(data-tab="1")
                             form.search__content-form
                                 input.search__content-input(type="text" placeholder="Введите номер")
                                 button.search__content-btn(type="submit") Искать
-                        .tabs-content.search__content-item#tab_2
+                        .tabs-content.search__content-item(data-tab="2")
                             form.search__content-form
                                 input.search__content-input(type="text" placeholder="Введите марку")
                                 button.search__content-btn(type="submit") Искать
-                        .tabs-content.search__content-item#tab_3
+                        .tabs-content.search__content-item(data-tab="3")
                             form.search__content-form
                                 input.search__content-input(type="text" placeholder="Введите название")
                                 button.search__content-btn(type="submit") Искать
@@ -158,16 +215,16 @@ html(lang="en")
             .container 
                 .products__inner
                     h3.title Популярные товары
-                    .tabs-wrapper
+                    .tabs-wrapper.panel__tabs
                         .tabs.products__tabs
-                            button.tab.tab--active.products__tab(data-tab="#product-tab-4") запчасти
-                            button.tab.products__tab(data-tab="#product-tab-5") моторы
-                            button.tab.products__tab(data-tab="#product-tab-6") шины
-                            button.tab.products__tab(data-tab="#product-tab-7") электроника
-                            button.tab.products__tab(data-tab="#product-tab-8") инструменты
-                            button.tab.products__tab(data-tab="#product-tab-9") аксессуары
+                            button.tab.tab--active.products__tab(data-tab="product-1") запчасти
+                            button.tab.products__tab(data-tab="product-5") моторы
+                            button.tab.products__tab(data-tab="product-6") шины
+                            button.tab.products__tab(data-tab="product-7") электроника
+                            button.tab.products__tab(data-tab="product-8") инструменты
+                            button.tab.products__tab(data-tab="product-9") аксессуары
                         .tab-container.products__container
-                            .tabs-content.product__content.tabs-content--active#product-tab-4
+                            .tabs-content.product__content.tabs-content--active(data-tab="product-1")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -239,7 +296,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#product-tab-5
+                            .tabs-content.product__content(data-tab="product-5")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -311,7 +368,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#product-tab-6
+                            .tabs-content.product__content(data-tab="product-6")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -383,7 +440,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#product-tab-7
+                            .tabs-content.product__content(data-tab="product-7")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -455,7 +512,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#product-tab-8
+                            .tabs-content.product__content(data-tab="product-8")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -527,7 +584,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#product-tab-9
+                            .tabs-content.product__content(data-tab="product-9")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -609,16 +666,16 @@ html(lang="en")
             .container 
                 .products__inner
                     h3.title С этими товарами покупают
-                    .tabs-wrapper
+                    .tabs-wrapper.panel__tabs
                         .tabs.products__tabs
-                            button.tab.tab--active.products__tab(data-tab="#popular-tab-4") запчасти
-                            button.tab.products__tab(data-tab="#popular-tab-5") моторы
-                            button.tab.products__tab(data-tab="#popular-tab-6") шины
-                            button.tab.products__tab(data-tab="#popular-tab-7") электроника
-                            button.tab.products__tab(data-tab="#popular-tab-8") инструменты
-                            button.tab.products__tab(data-tab="#popular-tab-9") аксессуары
+                            button.tab.tab--active.products__tab(data-tab="#popular-4") запчасти
+                            button.tab.products__tab(data-tab="#popular-5") моторы
+                            button.tab.products__tab(data-tab="#popular-6") шины
+                            button.tab.products__tab(data-tab="#popular-7") электроника
+                            button.tab.products__tab(data-tab="#popular-8") инструменты
+                            button.tab.products__tab(data-tab="#popular-9") аксессуары
                         .tab-container.products__container
-                            .tabs-content.product__content.tabs-content--active#popular-tab-4
+                            .tabs-content.product__content.tabs-content--active(data-tab="#popular-4")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -690,7 +747,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#popular-tab-5
+                            .tabs-content.product__content(data-tab="#popular-5")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -762,7 +819,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#popular-tab-6
+                            .tabs-content.product__content(data-tab="#popular-6")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -834,7 +891,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#popular-tab-7
+                            .tabs-content.product__content(data-tab="#popular-7")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -906,7 +963,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#popular-tab-8
+                            .tabs-content.product__content(data-tab="#popular-8")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -978,7 +1035,7 @@ html(lang="en")
                                     img(src="img/arrow-products-prev.svg", alt="")
                                 .product-slider__btn.next
                                     img(src="img/arrow-products-next.svg", alt="")
-                            .tabs-content.product__content#popular-tab-9
+                            .tabs-content.product__content(data-tab="#popular-9")
                                 .product-slider.swiper
                                     .swiper-wrapper
                                         .product-slider__item.swiper-slide
@@ -1101,10 +1158,3 @@ html(lang="en")
 
     script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(src="js/main.js")
-
-
-    //- .tabs-wrapper
-    //-     .tabs
-    //-         a.tab(href="#") 
-    //-     .tab-container
-    //-         .tab-content
