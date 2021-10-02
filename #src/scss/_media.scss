@@ -1,8 +1,13 @@
-@media(min-width:360px){}
+@media(min-width:360px){
+    .categories{
+        &__item{
+            padding: 20px 20px 16px;
+            }
+        }
+}
 @media(min-width:400px){}
 @media(min-width:450px){}
 @media(min-width:600px){
-    
     .menu__item{
         + .menu__item{
             padding-left: 20px;
@@ -47,7 +52,6 @@
         &-input{
             padding: 15px 20px;
         }
-    
         &-btn{
             position: static;
             width: auto;
@@ -75,9 +79,7 @@
 }
 @media(min-width:740px){}
 @media(min-width:760px){}
-@media(min-width:780px){
-    
-}
+@media(min-width:840px){}
 @media(min-width:920px){
     .menu-mobole__wrapper{
         display: none;
@@ -162,9 +164,14 @@
     .header__adress{
         margin-right: 60px;
     }
-    
 }
-@media(min-width:1195px){}
+@media(min-width:1195px){
+    .categories{
+        &__inner{
+            justify-content: space-between;
+        }
+    }
+}
 @media(min-width:1250px){}
 @media(min-width:1350px){
     .banner-section{
@@ -180,6 +187,15 @@
             object-fit: cover;
             min-height: 400px;
             max-width: 100%;
+        }
+    }
+    .product{
+        &-slider__btn{
+            display: block;
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            cursor: pointer;
         }
     }
 }

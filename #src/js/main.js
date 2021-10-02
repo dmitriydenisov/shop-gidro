@@ -21,6 +21,10 @@ const productSlider = new Swiper('.product-slider',{
       nextEl: ".next",
       prevEl: ".prev",
     },
+    pagination:{
+      el: ".product-pagination",
+    },
+  
 })
 
 const rangeSlider = document.querySelector('.aside-filter__slider');

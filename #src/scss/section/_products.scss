@@ -42,11 +42,11 @@
     &__content{
         position: relative;
     }
+    &-slider{
+        // position: relative;
+    }
     &-slider__btn{
-        position: absolute;
-        top: 50%;
-        z-index: 2;
-        cursor: pointer;
+        display: none;
     }
     &-item__wrapper{
         position: relative;
@@ -204,4 +204,18 @@
 }
 .banner{
     margin-bottom: 80px;
+}
+.product__pagination{
+    position: absolute;
+    text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+.pagination-bullet{
+    background-color: transparent;
+    // border: 1px solid #FFFFFF;
+}
+.pagination-bullet-active{
+    // background-color: #fff;
 }

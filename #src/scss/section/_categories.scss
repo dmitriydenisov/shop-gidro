@@ -1,7 +1,7 @@
 .categories{
     &__inner{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
     }
     &__item{
@@ -11,7 +11,7 @@
         max-width: 370px;
         width: 100%;
         display: flex;
-        padding: 20px 20px 16px;
+        padding: 20px 10px 16px;
         justify-content: space-between;
         transition: all .3s;
         &:hover{
