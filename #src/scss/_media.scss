@@ -43,6 +43,34 @@
     }
 }
 @media(min-width:640px){
+    .search__content{
+        &-input{
+            padding: 15px 20px;
+        }
+    
+        &-btn{
+            position: static;
+            width: auto;
+            height: auto;
+            transform: translateY(0);
+            display: block;
+            background: #1C62CD;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-family: 'SFProDisplay-Bold', sans-serif;
+            font-weight: 700;
+            color: #fff;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            border: none;
+            outline: none;
+            padding: 17px 41px;
+            cursor: pointer;
+            margin-left: -3px;
+        }
+    }
     
 }
 @media(min-width:740px){}
@@ -116,6 +144,9 @@
         }
 
     }   
+    .mobile-overflov{
+        width: auto;
+    }
 }
 @media(min-width:968px){
 }
