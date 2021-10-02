@@ -99,35 +99,6 @@ function labelClickHandler (){
 	if (item) {
 		item.classList.add("tabs-content--active");
 	}
-
-  // const labels = segment.querySelectorAll(".tab_label");
-	// labels.forEach((label) => label.classList.remove("tab_label--active"));
-	// this.classList.add("tab_label--active");
-  
-  // const tabsItems = tabPanel.querySelectorAll('.tabs-content');
-
-  // tabsBtn.forEach(onTabCkick);
-
-  // function onTabCkick(item){  
-  //   item.addEventListener('click', function(){
-
-  //     let tabId = item.getAttribute('data-tab');
-  //     let currentTab = tabPanel.querySelector(tabId);
-
-  //     if(!item.classList.contains('tab--active')){
-  //       tabsBtn.forEach(function(item){
-  //         item.classList.remove('tab--active');
-  //       });
-
-  //       tabsItems.forEach(function(item){
-  //         item.classList.remove('tabs-content--active');
-  //       });
-
-  //       item.classList.add('tab--active');
-  //       currentTab.classList.add('tabs-content--active');
-  //     };
-  //   });
-  // };
 }
 
 
@@ -262,7 +233,7 @@ function initRatings() {
       rating.classList.add('rating__sending');
 
       //отправка данных (value) на сервер
-      let response = await fetch('rating.json', {
+      let response = await fetch('json/rating.json', {
         method: 'GET',
         //body: JSON.stringify({
         //userRating: value

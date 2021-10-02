@@ -2,21 +2,13 @@
 @media(min-width:400px){}
 @media(min-width:450px){}
 @media(min-width:600px){
-    .menu .menu__list{
-        display: flex;
-    }
-    .menu__btn{
-        display: none;
-    }
-    .header__box{
-        display: flex;
-    }
+    
     .menu__item{
         + .menu__item{
             padding-left: 20px;
         }
     }
-    
+   
     .menu-categories{
         background: #F0F0F4;
         display: flex;
@@ -51,6 +43,30 @@
     }
 }
 @media(min-width:640px){
+    
+}
+@media(min-width:740px){}
+@media(min-width:760px){}
+@media(min-width:780px){
+    
+}
+@media(min-width:920px){
+    .menu-mobole__wrapper{
+        display: none;
+    }
+    .menu .menu__list{
+        display: flex;
+    }
+    .menu__btn{
+        display: none;
+    }
+    .header__box{
+        display: flex;
+    }
+    .header__bottom{
+        display: block;
+        margin-bottom: 80px;
+    }
     .header__adress{
         display: block;
         margin-right: 20px;
@@ -67,17 +83,41 @@
             height: 30px;
         }
     }
+    .banner-section{
+        &__inner{
+            justify-content: space-around;
+        }
+        &__slider-img{
+            object-fit: cover;
+            max-width: 600px;
+            min-height: 380px;
+        }
+        &__slider{
+            max-width: 600px;
+            position: relative;
+            margin-bottom: 0;
+        }
+        .container{
+            padding: 0 15px;
+        }
+        .swiper-prev,
+        .swiper-next{
+            display: block;
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            cursor: pointer;
+        }
+        .swiper-prev{
+            left: 15px;
+        }
+        .swiper-next{
+            right: 15px;
+        }
+
+    }   
 }
-@media(min-width:740px){}
-@media(min-width:760px){}
-@media(min-width:780px){
-}
-@media(min-width:900px){}
 @media(min-width:968px){
-    .header__bottom{
-        display: block;
-        margin-bottom: 80px;
-    }
 }
 @media(min-width:1024px){
 }
@@ -91,10 +131,27 @@
     .header__adress{
         margin-right: 60px;
     }
+    
 }
 @media(min-width:1195px){}
 @media(min-width:1250px){}
-@media(min-width:1350px){}
+@media(min-width:1350px){
+    .banner-section{
+        &__inner{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__slider{
+            max-width: 870px;
+            position: relative;
+        }
+        &__slider-img{
+            object-fit: cover;
+            min-height: 400px;
+            max-width: 100%;
+        }
+    }
+}
 @media(min-width:1400px){}
 @media(min-width:1920px){
     
