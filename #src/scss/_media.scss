@@ -78,7 +78,11 @@
     
 }
 @media(min-width:740px){}
-@media(min-width:760px){}
+@media(min-width:793px){
+    .products{
+        &__tabs{}
+    }
+}
 @media(min-width:840px){}
 @media(min-width:920px){
     .menu-mobole__wrapper{
@@ -172,7 +176,9 @@
         }
     }
 }
-@media(min-width:1250px){}
+@media(min-width:1250px){
+        
+}
 @media(min-width:1350px){
     .banner-section{
         &__inner{
@@ -197,6 +203,12 @@
             z-index: 2;
             cursor: pointer;
         }
+    }
+    .product-slider{
+        padding-bottom: 0;
+    }
+    .product-slider .swiper-pagination{
+       display: none;
     }
 }
 @media(min-width:1400px){}

@@ -1,6 +1,7 @@
 .products{
     &__tabs{
-        margin: 25px 0;
+        margin-top: 25px;
+        margin-bottom: 10px;
     }
     &__tab{
         +.products__tab{
@@ -44,6 +45,7 @@
     }
     &-slider{
         // position: relative;
+        padding-bottom: 40px;
     }
     &-slider__btn{
         display: none;
@@ -150,6 +152,9 @@
         
     }
 }
+.product-slider .swiper-pagination{
+    bottom: 0;
+}
 .product-slider__btn.prev{
     left: -40px;
 }
@@ -205,17 +210,6 @@
 .banner{
     margin-bottom: 80px;
 }
-.product__pagination{
-    position: absolute;
-    text-align: center;
-    transition: .3s opacity;
-    transform: translate3d(0,0,0);
-    z-index: 10;
-}
-.pagination-bullet{
-    background-color: transparent;
-    // border: 1px solid #FFFFFF;
-}
-.pagination-bullet-active{
-    // background-color: #fff;
+.banner img {
+    width: 100%;
 }

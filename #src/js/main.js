@@ -15,16 +15,38 @@ const banner = new Swiper(".banner-section__slider", {
 const productSlider = new Swiper('.product-slider',{
   loop: true,
   speed: 900,
-  slidesPerView: 4,
-  spaceBetween: 29,
+  slidesPerView: 1,
+  spaceBetween: 1,
   navigation: {
       nextEl: ".next",
       prevEl: ".prev",
     },
     pagination:{
-      el: ".product-pagination",
+      el: ".swiper-pagination",
+      clickable: true,
     },
-  
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 5,
+      },
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 5,
+      },
+      1000: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      1138: {
+        slidesPerView: 4,
+        spaceBetween: 1,
+      },
+      1200: {
+          slidesPerView: 4,
+          spaceBetween: 29,
+        },
+    }
 })
 
 const rangeSlider = document.querySelector('.aside-filter__slider');
