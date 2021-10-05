@@ -124,20 +124,22 @@ html(lang="en")
                             a.menu-categories__link(href="#") Запчасти
         .breadcrumbs
             .container
-                ul.breadcrumbs__list
-                    li.breadcrumbs__list-item 
-                        a(href="index.html") Главная
-                    li.breadcrumbs__list-item 
-                        span Гидроциклы
+                .breadcrumbs__inner
+                    ul.breadcrumbs__list.mobile-overflov
+                        li.breadcrumbs__list-item 
+                            a(href="index.html") Главная
+                        li.breadcrumbs__list-item 
+                            span Гидроциклы
         section.catalog
             .container 
                 h2.catalog__title Гидроциклы
                 .catalog__filter
-                    .catalog__filter-items
-                        button Полноприводные
-                        button от 5000
-                        button BRP
-                        button еще
+                    .catalog__filter-itemsinnner
+                        .catalog__filter-items.mobile-overflov
+                            button Полноприводные
+                            button от 5000
+                            button BRP
+                            button еще
                     .catalog__filter-btn
                         select.catalog__filter-select
                             option(value="По популярности") По популярности
@@ -161,6 +163,7 @@ html(lang="en")
                                 <rect y="16" width="3" height="3" rx="1.5" fill="#2F3035"/>
                             </svg>
                 .catalog__inner
+                    .aside__btn Фильтр
                     aside.catalog__inner-aside.aside-filter
                         .tabs-wrapper.panel__tabs
                             .tabs.aside-filter__tabs

@@ -283,3 +283,16 @@ function initRatings() {
     }
   }
 }
+if(document.documentElement.clientWidth < 540){
+  const dropFooter = document.querySelectorAll('.footer__top-title');
+    dropFooter.forEach(el => {
+      el.addEventListener('click', function(){
+        el.classList.toggle('footer__top-title--active')
+      });
+  });
+}
+
+const mobileFilter = document.querySelector('.aside__btn')
+mobileFilter.addEventListener('click', function(){
+  mobileFilter.classList.toggle('aside__btn--active')
+})
