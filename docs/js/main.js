@@ -15,12 +15,38 @@ const banner = new Swiper(".banner-section__slider", {
 const productSlider = new Swiper('.product-slider',{
   loop: true,
   speed: 900,
-  slidesPerView: 4,
-  spaceBetween: 29,
+  slidesPerView: 1,
+  spaceBetween: 1,
   navigation: {
       nextEl: ".next",
       prevEl: ".prev",
     },
+    pagination:{
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 5,
+      },
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 5,
+      },
+      1000: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      1138: {
+        slidesPerView: 4,
+        spaceBetween: 1,
+      },
+      1200: {
+          slidesPerView: 4,
+          spaceBetween: 29,
+        },
+    }
 })
 
 const rangeSlider = document.querySelector('.aside-filter__slider');
@@ -99,35 +125,6 @@ function labelClickHandler (){
 	if (item) {
 		item.classList.add("tabs-content--active");
 	}
-
-  // const labels = segment.querySelectorAll(".tab_label");
-	// labels.forEach((label) => label.classList.remove("tab_label--active"));
-	// this.classList.add("tab_label--active");
-  
-  // const tabsItems = tabPanel.querySelectorAll('.tabs-content');
-
-  // tabsBtn.forEach(onTabCkick);
-
-  // function onTabCkick(item){  
-  //   item.addEventListener('click', function(){
-
-  //     let tabId = item.getAttribute('data-tab');
-  //     let currentTab = tabPanel.querySelector(tabId);
-
-  //     if(!item.classList.contains('tab--active')){
-  //       tabsBtn.forEach(function(item){
-  //         item.classList.remove('tab--active');
-  //       });
-
-  //       tabsItems.forEach(function(item){
-  //         item.classList.remove('tabs-content--active');
-  //       });
-
-  //       item.classList.add('tab--active');
-  //       currentTab.classList.add('tabs-content--active');
-  //     };
-  //   });
-  // };
 }
 
 
@@ -262,7 +259,7 @@ function initRatings() {
       rating.classList.add('rating__sending');
 
       //отправка данных (value) на сервер
-      let response = await fetch('rating.json', {
+      let response = await fetch('json/rating.json', {
         method: 'GET',
         //body: JSON.stringify({
         //userRating: value
@@ -285,4 +282,19 @@ function initRatings() {
       }
     }
   }
+}
+if(document.documentElement.clientWidth < 540){
+  const dropFooter = document.querySelectorAll('.footer__top-title');
+    dropFooter.forEach(el => {
+      el.addEventListener('click', function(){
+        el.classList.toggle('footer__top-title--active')
+      });
+  });
+}
+
+const mobileFilter = document.querySelector('.aside__btn')
+if(mobileFilter){
+  mobileFilter.addEventListener('click', function(){
+    mobileFilter.classList.toggle('aside__btn--active')
+  })
 }
