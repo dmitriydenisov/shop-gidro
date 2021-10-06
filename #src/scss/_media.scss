@@ -268,7 +268,7 @@
         margin-left: 69px;
     }
 }
-@media(min-width:973px){
+@media(min-width:980px){
     .card__tabs{
         &-box{
             display: flex;
@@ -323,6 +323,9 @@
     .product-card{
         &__img-box{
             order: 0;
+        }
+        &__tabs{
+            display: block;
         }
     }
 }
