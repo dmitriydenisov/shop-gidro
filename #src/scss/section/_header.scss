@@ -48,6 +48,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    padding: 0;
     &-line{
         background: #2F3035;
         border-radius: 3px;
@@ -81,4 +82,23 @@
     position: absolute;
     left: 11px;
     bottom: 0;
+}
+.menu-mobole__wrapper{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    background: #F0F0F4;
+    overflow-x: auto;
+    padding: 15px;
+    margin-bottom: 25px;
+
+}
+.menu-mobile__line{
+    display: flex;
+    width: 405px;
+}
+.menu__item{
+    + .menu__item{
+        padding-left: 15px;
+    }
 }

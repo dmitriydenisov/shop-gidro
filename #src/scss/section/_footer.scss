@@ -5,17 +5,38 @@
     }
     &__top-inner{
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__top-newslatter.footer__top-item{
-        width: 295px;
-        margin-right: 50px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 290px;
     }
     &__top-title{
         font-family: 'SFProDisplay-Bold', sans-serif;
         font-weight: 700;
         font-size: 14px;
         line-height: 17px;
+    }
+    &__top-item{
+        &:nth-child(2),&:nth-child(3){
+        .footer__top-title{
+            position: relative;
+            border-top: 2px solid #d8d8e2;
+            border-bottom: 2px solid #d8d8e2;
+            padding: 16px;
+            &:before{
+                content: '';
+                position: absolute;
+                right: 13px;
+                width: 12px;
+                height: 8px;
+                background-image: url(../img/drop-down.svg);
+                transform: rotate(0);
+            }
+        }
+    }
     }
     &-form{
         margin-top: 35px;
@@ -33,12 +54,14 @@
         }
     }
     &-list{
+        display: none;
         font-size: 14px;
         line-height: 25px;
+        padding-left: 16px;
     }
     &-form__btn{
         background: #1C62CD;
-        padding: 10px 16px;
+        padding: 10px;
         border: none;
         outline: none;
         cursor: pointer;
@@ -51,21 +74,32 @@
         color: #FFFFFF;
     }
     &__top-item{
-        width: 200px; 
+        width: 100%;
+        margin-bottom: 40px;
     }
+    
     &__top-social.footer__top-item{
         width: 250px;
     }
     &__bottom{
         padding: 46px 0 22px;
-        display: flex;
-        justify-content: center;
     }
     &__bottom-link{
+        width: 100%;
         font-size: 10px;
         line-height: 12px;
         color: #48494D;
-        margin: 0 40px;
+        margin: 0;
+    }
+}
+.footer__top-title--active +.footer-list{
+    display: block;
+}
+.footer__top-item{
+    &:nth-child(2),&:nth-child(3){
+        .footer__top-title--active:before{
+            transform: rotate(180deg);
+        }
     }
 }
 .social-list{

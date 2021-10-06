@@ -1,6 +1,7 @@
 .products{
     &__tabs{
-        margin: 25px 0;
+        margin-top: 25px;
+        margin-bottom: 10px;
     }
     &__tab{
         +.products__tab{
@@ -42,11 +43,12 @@
     &__content{
         position: relative;
     }
+    &-slider{
+        // position: relative;
+        padding-bottom: 40px;
+    }
     &-slider__btn{
-        position: absolute;
-        top: 50%;
-        z-index: 2;
-        cursor: pointer;
+        display: none;
     }
     &-item__wrapper{
         position: relative;
@@ -150,6 +152,9 @@
         
     }
 }
+.product-slider .swiper-pagination{
+    bottom: 0;
+}
 .product-slider__btn.prev{
     left: -40px;
 }
@@ -204,4 +209,7 @@
 }
 .banner{
     margin-bottom: 80px;
+}
+.banner img {
+    width: 100%;
 }

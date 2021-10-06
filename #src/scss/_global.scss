@@ -26,8 +26,14 @@ body{
     font-size: 25px;
     line-height: 30px;
 }
+.catalog__filter-itemsinnner{
+    overflow-x: auto;
+}
 .breadcrumbs{
     margin-bottom: 40px;
+    &__inner{
+        overflow-x: auto;
+    }
     &__list{
         display: flex;
     }
@@ -51,4 +57,11 @@ body{
         display: none;
     }
      }
+}
+.swiper{
+    margin-left: inherit;
+    margin-right: inherit;
+}
+.tab-container{
+    margin-top: 15px;
 }

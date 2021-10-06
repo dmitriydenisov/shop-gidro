@@ -1,3 +1,9 @@
+.mobile-overflov{
+    width: 800px;
+}
+.tabs__wrapper{
+    overflow-x: auto;
+}
 .search__tabs{
     margin-bottom: 25px;
     .tab{
@@ -24,11 +30,13 @@
     
     &-form{
         display: flex;
+        position: relative;
     }
     &-input{
         background: #F0F0F4;
         border-radius: 3px;
-        padding: 15px 20px;
+        padding: 15px 50px 15px 20px;
+        // padding-right: 50px;
         font-size: 16px;
         line-height: 19px;
         border: none;
@@ -39,19 +47,19 @@
         }
     }
     &-btn{
-        background: #1C62CD;
-        border-radius: 3px;
-        text-transform: uppercase;
-        font-family: 'SFProDisplay-Bold', sans-serif;
-        font-weight: 700;
-        color: #fff;
-        font-size: 14px;
+        background-image: url('../img/search-btn.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        font-size: 0;
         line-height: 17px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
         border: none;
         outline: none;
-        padding: 17px 41px;
+        // padding: 17px 41px;
         cursor: pointer;
         margin-left: -3px;
     }
