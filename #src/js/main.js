@@ -293,6 +293,8 @@ if(document.documentElement.clientWidth < 540){
 }
 
 const mobileFilter = document.querySelector('.aside__btn')
-mobileFilter.addEventListener('click', function(){
-  mobileFilter.classList.toggle('aside__btn--active')
-})
+if(mobileFilter){
+  mobileFilter.addEventListener('click', function(){
+    mobileFilter.classList.toggle('aside__btn--active')
+  })
+}
