@@ -298,3 +298,11 @@ if(mobileFilter){
     mobileFilter.classList.toggle('aside__btn--active')
   })
 }
+
+//скрипт отображения магазинов в карточке товаров
+const mobBtn = document.querySelector('li.card__list-btn')
+if(mobBtn){
+  mobBtn.addEventListener('click', function() {
+    mobBtn.classList.toggle('card__list-btn--active')
+  })
+}
