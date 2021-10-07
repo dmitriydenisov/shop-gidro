@@ -88,36 +88,62 @@
 .card__list-item{
     padding: 20px 0;
     border-bottom: 1px solid rgba(#2F3035, .1);
-    display: flex;
+    // display: flex;
     font-size: 16px;
     line-height: 19px;
     color: rgba(#2F3035, .7);
     &--title{
-        color:#2F3035;
-        font-size: 20px;
-        line-height: 24px;
+        display: none;
     }
 }
 .card__list-address{
-    width: 220px;
-    margin-right: 80px;
+    
 
 }
 .card__list-workhours{
-    width: 160px;
-    margin-right: 95px;
+    width: 100%;
     
 }
+.card__list-mobile{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.mobile-title{
+    font-weight: 700;
+}
 .workhours{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.card__list-avialable{
-    width: 140px;
-    margin-right: 60px;
+.card__list-mobileBtn{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1C62CD;
+    position: relative;
+    &:before{
+        position: absolute;
+        content: '';
+        width: 12px;
+        height: 8px;
+        background-image: url('../img/drop-down-blue.svg');
+        transform: rotate(0);
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
-.card__list-num{
-    width: 105px;
+.card__list-btn--active:before{
+    transform: rotate(180deg);
+}
+.card__list-btn--active ~ .mobile-dn{
+    display: block;
+}
+.mobile-dn{
+    display: none;
 }
 .card__list-btn{
     margin-left: auto;
@@ -133,5 +159,6 @@
         letter-spacing: 0.12em;
         color: #FFFFFF;
         text-transform: uppercase;
+        width: 100%;
     }
 }

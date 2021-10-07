@@ -199,9 +199,9 @@ html(lang="en")
                                 button.tab.card__tab(data-tab="warranty") Гарантия
                             .tabs-container
                                 .tabs-content.card__tab-content(data-tab="about-product")
-                                    p Топовая модель гидроцикла BRP Sea-Doo GTI Limited 155 отличается самым мощным в линейке Sea-Doo Recreation двигателем, который выдаёт 155 лошадиных сил, а также самой расширенной комплектацией уже в базе. Съемный багажник объемом 116 литров, круиз-контроль, система защиты от угона, ограничитель скорости и многое другое. Экономичный, но при этом мощный двигатель Rotax 1503 NA 4-TEC развивает мощность 155 л.с. и оборудован системой охлаждения замкнутого типа, что в совокупность дает большую мощность и стабильность работы, а также надежную защиту от внешней среды.
+                                    p.card__tab-description Топовая модель гидроцикла BRP Sea-Doo GTI Limited 155 отличается самым мощным в линейке Sea-Doo Recreation двигателем, который выдаёт 155 лошадиных сил, а также самой расширенной комплектацией уже в базе. Съемный багажник объемом 116 литров, круиз-контроль, система защиты от угона, ограничитель скорости и многое другое. Экономичный, но при этом мощный двигатель Rotax 1503 NA 4-TEC развивает мощность 155 л.с. и оборудован системой охлаждения замкнутого типа, что в совокупность дает большую мощность и стабильность работы, а также надежную защиту от внешней среды.
 
-                                    p Предусмотрена система VTS, отвечающая за угол наклона носа. Благодаря ей можно улучшить устойчивость аппарата при быстрой езде, или максимально подстроить для буксировки. Умная система IBR делает остановку гидроцикла Sea-Doo GTI LTD 155 быстрой и придает больше маневренности. Комфортные сиденья с дополнительной поддержкой вмещают 3-х пассажиров. Водителю на информативной приборной панели доступны показатели работы всех систем гидроцикла и дополнительные функции. По желанию можно изменить характери езды, переключившись на один из предустановленных режимов: Спорт, Эко, Туризм. Легко вылезти прямо из воды поможет специальная ручка на корпусе.
+                                    p.card__tab-description Предусмотрена система VTS, отвечающая за угол наклона носа. Благодаря ей можно улучшить устойчивость аппарата при быстрой езде, или максимально подстроить для буксировки. Умная система IBR делает остановку гидроцикла Sea-Doo GTI LTD 155 быстрой и придает больше маневренности. Комфортные сиденья с дополнительной поддержкой вмещают 3-х пассажиров. Водителю на информативной приборной панели доступны показатели работы всех систем гидроцикла и дополнительные функции. По желанию можно изменить характери езды, переключившись на один из предустановленных режимов: Спорт, Эко, Туризм. Легко вылезти прямо из воды поможет специальная ручка на корпусе.
                                 .tabs-content.card__tab-content(data-tab="specifications") 
                                     ul.product-card__list 
                                         li.product-card__item 
@@ -243,55 +243,84 @@ html(lang="en")
                                                 .card__list-num Количество
                                                 .card__list-btn
                                             li.card__list-item
-                                                .card__list-address Москва, ул. Науки 25
-                                                .card__list-workhours
+                                                .card__list-address.card__list-mobile
+                                                    .mobile-title Адрес
+                                                    | Москва, ул. Науки 25
+                                                .card__list-workhours.card__list-mobile
+                                                    .mobile-title Режим работы
                                                     div.workhours
                                                         span пн-сб: 
                                                         span 08:00-19:00
                                                     div.workhours
                                                         span вс: 
                                                         span 09:00-17:00
-                                                .card__list-avialable В наличии
-                                                .card__list-num 1
+                                                .card__list-avialable.card__list-mobile
+                                                    .mobile-title Доступно
+                                                    | В наличии
+                                                .card__list-num.card__list-mobile
+                                                    .mobile-title Количество
+                                                    | 1
+                                                .card__list-btn.card__list-mobile
+                                                    button(type="submit") купить
+                                            li.card__list-mobileBtn Показать все магазины
+                                            li.card__list-item.mobile-dn
+                                                .card__list-address.card__list-mobile
+                                                    .mobile-title Адрес
+                                                    | Москва, ул.  Южная 134
+                                                .card__list-workhours.card__list-mobile
+                                                    .mobile-title Режим работы
+                                                    div.workhours
+                                                        span пн-сб: 
+                                                        span 08:00-19:00
+                                                    div.workhours
+                                                        span вс: 
+                                                        span 09:00-17:00
+                                                .card__list-avialable.card__list-mobile
+                                                    .mobile-title Доступно
+                                                    | В наличии
+                                                .card__list-num.card__list-mobile
+                                                    .mobile-title Количество
+                                                    | 2
                                                 .card__list-btn
                                                     button(type="submit") купить
-                                            li.card__list-item
-                                                .card__list-address Москва, ул.  Южная 134
-                                                .card__list-workhours
+                                            li.card__list-item.mobile-dn
+                                                .card__list-address.card__list-mobile
+                                                    .mobile-title Адрес
+                                                    | Санкт-Петербург,<br> ул. Красная 19
+                                                .card__list-workhours.card__list-mobile
+                                                    .mobile-title Режим работы
                                                     div.workhours
                                                         span пн-сб: 
                                                         span 08:00-19:00
                                                     div.workhours
                                                         span вс: 
                                                         span 09:00-17:00
-                                                .card__list-avialable В наличии
-                                                .card__list-num 2
+                                                .card__list-avialable.card__list-mobile
+                                                    .mobile-title Доступно
+                                                    | Нет в наличии
+                                                .card__list-num.card__list-mobile
+                                                    .mobile-title Количество
+                                                    | 0
                                                 .card__list-btn
                                                     button(type="submit") купить
-                                            li.card__list-item
-                                                .card__list-address Санкт-Петербург,<br> ул. Красная 19
-                                                .card__list-workhours
+                                            li.card__list-item.mobile-dn
+                                                .card__list-address.card__list-mobile
+                                                    .mobile-title Адрес
+                                                    | Киев, ул Шевченко 167
+                                                .card__list-workhours.card__list-mobile
+                                                    .mobile-title Режим работы
                                                     div.workhours
                                                         span пн-сб: 
                                                         span 08:00-19:00
                                                     div.workhours
                                                         span вс: 
                                                         span 09:00-17:00
-                                                .card__list-avialable Нет в наличии
-                                                .card__list-num 0
-                                                .card__list-btn
-                                                    button(type="submit") купить
-                                            li.card__list-item
-                                                .card__list-address Киев, ул Шевченко 167
-                                                .card__list-workhours
-                                                    div.workhours
-                                                        span пн-сб: 
-                                                        span 08:00-19:00
-                                                    div.workhours
-                                                        span вс: 
-                                                        span 09:00-17:00
-                                                .card__list-avialable Нет в наличии
-                                                .card__list-num 0
+                                                .card__list-avialable.card__list-mobile
+                                                    .mobile-title Доступно
+                                                    | Нет в наличии
+                                                .card__list-num.card__list-mobile
+                                                    .mobile-title Количество
+                                                    | 0
                                                 .card__list-btn
                                                     button(type="submit") купить
                                 .tabs-content.card__tab-content(data-tab="delivery") content-5
@@ -299,449 +328,456 @@ html(lang="en")
                                 .tabs-content.card__tab-content(data-tab="warranty") content-7
         section.products
             .container 
-                .products__inner.panel__tabs
+                .products__inner
                     h3.title С этими товарами покупают
-                    .tabs__wrapper
-                        .tabs.products__tabs.mobile-overflov
-                            button.tab.tab--active.products__tab(data-tab="popular-4") запчасти
-                            button.tab.products__tab(data-tab="popular-5") моторы
-                            button.tab.products__tab(data-tab="popular-6") шины
-                            button.tab.products__tab(data-tab="popular-7") электроника
-                            button.tab.products__tab(data-tab="popular-8") инструменты
-                            button.tab.products__tab(data-tab="popular-9") аксессуары
-                    .tab-container.products__container
-                        .tabs-content.product__content.tabs-content--active(data-tab="popular-4")
-                            .product-slider.swiper
-                                .swiper-wrapper
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper.product-item__not-available
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                            .product-slider__btn.prev 
-                                img(src="img/arrow-products-prev.svg", alt="")
-                            .product-slider__btn.next
-                                img(src="img/arrow-products-next.svg", alt="")
-                        .tabs-content.product__content(data-tab="popular-5")
-                            .product-slider.swiper
-                                .swiper-wrapper
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-2.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper.product-item__not-available
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                            .product-slider__btn.prev 
-                                img(src="img/arrow-products-prev.svg", alt="")
-                            .product-slider__btn.next
-                                img(src="img/arrow-products-next.svg", alt="")
-                        .tabs-content.product__content(data-tab="popular-6")
-                            .product-slider.swiper
-                                .swiper-wrapper
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-3.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper.product-item__not-available
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                            .product-slider__btn.prev 
-                                img(src="img/arrow-products-prev.svg", alt="")
-                            .product-slider__btn.next
-                                img(src="img/arrow-products-next.svg", alt="")
-                        .tabs-content.product__content(data-tab="popular-7")
-                            .product-slider.swiper
-                                .swiper-wrapper
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-4.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper.product-item__not-available
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                            .product-slider__btn.prev 
-                                img(src="img/arrow-products-prev.svg", alt="")
-                            .product-slider__btn.next
-                                img(src="img/arrow-products-next.svg", alt="")
-                        .tabs-content.product__content(data-tab="popular-8")
-                            .product-slider.swiper
-                                .swiper-wrapper
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-2.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-2.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper.product-item__not-available
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                            .product-slider__btn.prev 
-                                img(src="img/arrow-products-prev.svg", alt="")
-                            .product-slider__btn.next
-                                img(src="img/arrow-products-next.svg", alt="")
-                        .tabs-content.product__content(data-tab="popular-9")
-                            .product-slider.swiper
-                                .swiper-wrapper
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-4.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper.product-item__not-available
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                                    .product-slider__item.swiper-slide
-                                        .product-item__wrapper
-                                            button.product-item__favorite
-                                            button.product-item__basket
-                                                img(src="img/basket-white.svg", alt="")
-                                            a.product-item__notify-link(href="#")
-                                                span Сообщить о поступлении
-                                            a.product-item.product-item--sale(href="#")
-                                                p.product-item__hover-text посмотреть товар
-                                                img.product-item__img(src="img/usercontent/product-1.png", alt="")
-                                                h4.product-item__title Водонепроницаемый Рюкзак
-                                                p.price.product-item__price 9 800 ₽
-                                                p.product-item__notify-text нет в наличии
-                            .product-slider__btn.prev 
-                                img(src="img/arrow-products-prev.svg", alt="")
-                            .product-slider__btn.next
-                                img(src="img/arrow-products-next.svg", alt="")
+                    .panel__tabs
+                        .tabs__wrapper
+                                .tabs.products__tabs.mobile-overflov
+                                button.tab.tab--active.products__tab(data-tab="popular-1") запчасти
+                                button.tab.products__tab(data-tab="popular-2") моторы
+                                button.tab.products__tab(data-tab="popular-3") шины
+                                button.tab.products__tab(data-tab="popular-4") электроника
+                                button.tab.products__tab(data-tab="popular-5") инструменты
+                                button.tab.products__tab(data-tab="popular-6") аксессуары
+                        .tab-container.products__container
+                            .tabs-content.product__content.tabs-content--active(data-tab="popular-1")
+                                .product-slider.swiper
+                                    .swiper-wrapper
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-2.png", alt="")
+                                                    h4.product-item__title Спасательный жилет BRP Men's Airflow PFD
+                                                    p.price.product-item__price 6 900 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-3.png", alt="")
+                                                    h4.product-item__title BRP Audio-Premium System
+                                                    p.price.product-item__price 68 000 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper.product-item__not-available
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-4.png", alt="")
+                                                    h4.product-item__title Спасательное снаряжение
+                                                    p.price.product-item__price 7 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-2.png", alt="")
+                                                    h4.product-item__title Спасательный жилет BRP Men's Airflow PFD
+                                                    p.price.product-item__price 6 900 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                    .swiper-pagination
+                                .product-slider__btn.prev 
+                                    img(src="img/arrow-products-prev.svg", alt="")
+                                .product-slider__btn.next
+                                    img(src="img/arrow-products-next.svg", alt="")
+                            .tabs-content.product__content(data-tab="popular-2")
+                                .product-slider.swiper
+                                    .swiper-wrapper
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-2.png", alt="")
+                                                    h4.product-item__title Спасательный жилет BRP Men's Airflow PFD
+                                                    p.price.product-item__price 6 900 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-3.png", alt="")
+                                                    h4.product-item__title BRP Audio-Premium System
+                                                    p.price.product-item__price 68 000 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper.product-item__not-available
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-4.png", alt="")
+                                                    h4.product-item__title Спасательное снаряжение
+                                                    p.price.product-item__price 8 000 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-3.png", alt="")
+                                                    h4.product-item__title BRP Audio-Premium System
+                                                    p.price.product-item__price 68 000 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                    .swiper-pagination
+                                .product-slider__btn.prev 
+                                    img(src="img/arrow-products-prev.svg", alt="")
+                                .product-slider__btn.next
+                                    img(src="img/arrow-products-next.svg", alt="")
+                            .tabs-content.product__content(data-tab="popular-3")
+                                .product-slider.swiper
+                                    .swiper-wrapper
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-3.png", alt="")
+                                                    h4.product-item__title BRP Audio-Premium System
+                                                    p.price.product-item__price 68 000 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-4.png", alt="")
+                                                    h4.product-item__title Спасательное снаряжение
+                                                    p.price.product-item__price 7 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper.product-item__not-available
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-2.png", alt="")
+                                                    h4.product-item__title Спасательный жилет BRP Men's Airflow PFD
+                                                    p.price.product-item__price 6 900 ₽ 
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                    .swiper-pagination
+                                .product-slider__btn.prev 
+                                    img(src="img/arrow-products-prev.svg", alt="")
+                                .product-slider__btn.next
+                                    img(src="img/arrow-products-next.svg", alt="")
+                            .tabs-content.product__content(data-tab="popular-4")
+                                .product-slider.swiper
+                                    .swiper-wrapper
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-3.png", alt="")
+                                                    h4.product-item__title BRP Audio-Premium System
+                                                    p.price.product-item__price 68 000 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-4.png", alt="")
+                                                    h4.product-item__title Спасательное снаряжение
+                                                    p.price.product-item__price 7 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper.product-item__not-available
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-2.png", alt="")
+                                                    h4.product-item__title Спасательный жилет BRP Men's Airflow PFD
+                                                    p.price.product-item__price 6 900 ₽ 
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                    .swiper-pagination
+                                .product-slider__btn.prev 
+                                    img(src="img/arrow-products-prev.svg", alt="")
+                                .product-slider__btn.next
+                                    img(src="img/arrow-products-next.svg", alt="")
+                            .tabs-content.product__content(data-tab="popular-5")
+                                .product-slider.swiper
+                                    .swiper-wrapper
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-3.png", alt="")
+                                                    h4.product-item__title BRP Audio-Premium System
+                                                    p.price.product-item__price 68 000 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-4.png", alt="")
+                                                    h4.product-item__title Спасательное снаряжение
+                                                    p.price.product-item__price 7 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper.product-item__not-available
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-2.png", alt="")
+                                                    h4.product-item__title Спасательный жилет BRP Men's Airflow PFD
+                                                    p.price.product-item__price 6 900 ₽ 
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                    .swiper-pagination
+                                .product-slider__btn.prev 
+                                    img(src="img/arrow-products-prev.svg", alt="")
+                                .product-slider__btn.next
+                                    img(src="img/arrow-products-next.svg", alt="")
+                            .tabs-content.product__content(data-tab="popular-6")
+                                .product-slider.swiper
+                                    .swiper-wrapper
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-3.png", alt="")
+                                                    h4.product-item__title BRP Audio-Premium System
+                                                    p.price.product-item__price 68 000 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-4.png", alt="")
+                                                    h4.product-item__title Спасательное снаряжение
+                                                    p.price.product-item__price 7 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper.product-item__not-available
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-2.png", alt="")
+                                                    h4.product-item__title Спасательный жилет BRP Men's Airflow PFD
+                                                    p.price.product-item__price 6 900 ₽ 
+                                                    p.product-item__notify-text нет в наличии
+                                        .product-slider__item.swiper-slide
+                                            .product-item__wrapper
+                                                button.product-item__favorite
+                                                button.product-item__basket
+                                                    img(src="img/basket-white.svg", alt="")
+                                                a.product-item__notify-link(href="#")
+                                                    span Сообщить о поступлении
+                                                a.product-item.product-item--sale(href="#")
+                                                    p.product-item__hover-text посмотреть товар
+                                                    img.product-item__img(src="img/usercontent/product-1.png", alt="")
+                                                    h4.product-item__title Водонепроницаемый Рюкзак
+                                                    p.price.product-item__price 9 800 ₽
+                                                    p.product-item__notify-text нет в наличии
+                                    .swiper-pagination
+                                .product-slider__btn.prev 
+                                    img(src="img/arrow-products-prev.svg", alt="")
+                                .product-slider__btn.next
+                                    img(src="img/arrow-products-next.svg", alt="")
         footer.footer
             .container
                 .footer__top 
