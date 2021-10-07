@@ -2133,13 +2133,13 @@ input[type=number] {
           transform: translateY(-50%);
 }
 
-.card__list-btn--active:before {
+.card__list-mobileBtn--active:before {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.card__list-btn--active ~ .mobile-dn {
+.card__list-mobileBtn--active ~ .mobile-dn {
   display: block;
 }
 

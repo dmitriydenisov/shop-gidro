@@ -307,9 +307,9 @@ if(mobileFilter){
 }
 
 //скрипт отображения магазинов в карточке товаров
-const mobBtn = document.querySelector('li.card__list-btn')
+const mobBtn = document.querySelector('li.card__list-mobileBtn')
 if(mobBtn){
   mobBtn.addEventListener('click', function() {
-    mobBtn.classList.toggle('card__list-btn--active')
+    mobBtn.classList.toggle('card__list-mobileBtn--active')
   })
 }
