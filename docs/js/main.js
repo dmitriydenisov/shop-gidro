@@ -12,6 +12,12 @@ const banner = new Swiper(".banner-section__slider", {
         clickable: true,
       },
 });
+function slider() {
+  const slider = this.closest('.swiper');
+    if (!slider) {
+      return;
+    }
+}
 const productSlider = new Swiper('.product-slider',{
   loop: true,
   speed: 900,
@@ -93,13 +99,13 @@ element.forEach(el => {
 const mobileBtn = document.querySelector('.menu__btn');
 const mobileMenu = document.querySelector('.menu-mobile__list');
 if(mobileBtn){
-mobileBtn.addEventListener('click', function(){
-  mobileMenu.classList.toggle('menu-mobile__list--active')
-})}
+  mobileBtn.addEventListener('click', function(){
+    mobileMenu.classList.toggle('menu-mobile__list--active')
+  })
+}
 
 // табы
 const tabs = document.querySelectorAll('.tab');
-
 tabs.forEach((tab) => tab.addEventListener('click', labelClickHandler));
 
 function labelClickHandler (){
@@ -283,6 +289,7 @@ function initRatings() {
     }
   }
 }
+//аккардион в подвале приразрешении экрана меньше 540px
 if(document.documentElement.clientWidth < 540){
   const dropFooter = document.querySelectorAll('.footer__top-title');
     dropFooter.forEach(el => {
@@ -291,10 +298,18 @@ if(document.documentElement.clientWidth < 540){
       });
   });
 }
-
+//показ фильтра в мобильной версии
 const mobileFilter = document.querySelector('.aside__btn')
 if(mobileFilter){
   mobileFilter.addEventListener('click', function(){
     mobileFilter.classList.toggle('aside__btn--active')
+  })
+}
+
+//скрипт отображения магазинов в карточке товаров
+const mobBtn = document.querySelector('li.card__list-btn')
+if(mobBtn){
+  mobBtn.addEventListener('click', function() {
+    mobBtn.classList.toggle('card__list-btn--active')
   })
 }
