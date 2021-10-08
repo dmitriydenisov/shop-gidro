@@ -12,12 +12,12 @@ const banner = new Swiper(".banner-section__slider", {
         clickable: true,
       },
 });
-function slider() {
-  const slider = this.closest('.swiper');
-    if (!slider) {
-      return;
-    }
-}
+// function slider() {
+//   const slider = this.closest('.swiper');
+//     if (!slider) {
+//       return;
+//     }
+// }
 const productSlider = new Swiper('.product-slider',{
   loop: true,
   speed: 900,
@@ -94,6 +94,38 @@ element.forEach(el => {
     searchEnabled: false,
   });
 })
+
+//показать еще в фильтре
+const filterBlock = document.querySelectorAll('.aside-filter__item-drop');
+
+if(filterBlock){
+
+  for(let item of filterBlock){
+
+    const itemBtn = item.querySelector('.watch-more__btn');
+
+    const hideItems = item.querySelectorAll('.dn');
+
+    if(itemBtn){
+      itemBtn.addEventListener('click', function(e){
+
+        e.preventDefault();
+
+        for(let filter of hideItems){
+          if(filter.classList.contains('visible')){
+            filter.classList.remove('visible');
+            itemBtn.classList.remove('dn')
+          }
+          else{
+            filter.classList.add('visible');
+            itemBtn.classList.add('dn')
+          }
+        }      
+      })
+    }
+  }
+}
+
 
 //скрипт мобильного меню
 const mobileBtn = document.querySelector('.menu__btn');
