@@ -180,8 +180,8 @@ html(lang="en")
                                                 .aside-filter__content
                                                     .aside-filter__content-box
                                                         label.aside-filter__label
-                                                            input.aside-filter__input(type="checkbox" data-filter="russia")
-                                                            span.aside-filter__style.aside-filter__style--check
+                                                            input.aside-filter__input(type="checkbox" checked)
+                                                            span.aside-filter__style
                                                             |Все
                                                     .aside-filter__content-box
                                                         label.aside-filter__label
@@ -198,7 +198,7 @@ html(lang="en")
                                                 .aside-filter__content.aside-filter__content--radio
                                                     .aside-filter__content-box
                                                         label.aside-filter__label
-                                                            input.aside-filter__input(name="radio" type="radio")
+                                                            input.aside-filter__input(name="radio" type="radio" checked)
                                                             span.aside-filter__style
                                                             |Все
                                                     .aside-filter__content-box
@@ -253,11 +253,6 @@ html(lang="en")
                                                 .aside-filter__content
                                                     .aside-filter__content-box
                                                         label.aside-filter__label
-                                                            input.aside-filter__input(type="checkbox" data-filter="russia")
-                                                            span.aside-filter__style.aside-filter__style--check
-                                                            |Все
-                                                    .aside-filter__content-box
-                                                        label.aside-filter__label
                                                             input.aside-filter__input(type="checkbox")
                                                             span.aside-filter__style.aside-filter__style--check
                                                             |BRP
@@ -277,11 +272,6 @@ html(lang="en")
                                                 p.aside-filter__item-title.filter__item-drop.filter__item-drop--active Модель
                                                 .aside-filter__content
                                                     input.aside-filter__slider-input(type="text" placeholder="Введите модель")
-                                                    .aside-filter__content-box
-                                                        label.aside-filter__label
-                                                            input.aside-filter__input(type="checkbox" data-filter="russia")
-                                                            span.aside-filter__style.aside-filter__style--check
-                                                            |Все
                                                     .aside-filter__content-box
                                                         label.aside-filter__label
                                                             input.aside-filter__input(type="checkbox")
@@ -344,11 +334,6 @@ html(lang="en")
                                                         label.aside-filter__label
                                                             input.aside-filter__input(type="checkbox" data-filter="russia")
                                                             span.aside-filter__style.aside-filter__style--check
-                                                            |Все
-                                                    .aside-filter__content-box
-                                                        label.aside-filter__label
-                                                            input.aside-filter__input(type="checkbox" data-filter="russia")
-                                                            span.aside-filter__style.aside-filter__style--check
                                                             |Россия
                                                     .aside-filter__content-box
                                                         label.aside-filter__label
@@ -384,7 +369,7 @@ html(lang="en")
                                                 button.filter-btn__reset(type="submit") Сбросить фильтр
                                 .tabs-content.aside-filter__tabs-content(data-tab="model") фильтр по модели
                     .catalog__inner-list
-                        .product-item__wrapper.russia(data-filter="russia")
+                        .product-item__wrapper(data-country="russia")
                             button.product-item__favorite
                             button.product-item__basket
                                 img(src="img/basket-white.svg", alt="")
@@ -396,7 +381,7 @@ html(lang="en")
                                 h4.product-item__title Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango
                                 p.price.product-item__price 1 049 500 ₽
                                 p.product-item__notify-text нет в наличии
-                        .product-item__wrapper.russia(data-filter="russia")
+                        .product-item__wrapper(data-country="russia")
                             button.product-item__favorite
                             button.product-item__basket
                                 img(src="img/basket-white.svg", alt="")
@@ -432,7 +417,7 @@ html(lang="en")
                                 h4.product-item__title Гидроцикл BRP SeaDoo GTR 230hp STD Black / Gulfstream
                                 p.price.product-item__price 2 049 500 ₽
                                 p.product-item__notify-text нет в наличии
-                        .product-item__wrapper
+                        .product-item__wrapper(data-country="russia")
                             button.product-item__favorite
                             button.product-item__basket
                                 img(src="img/basket-white.svg", alt="")
@@ -444,7 +429,7 @@ html(lang="en")
                                 h4.product-item__title Гидроцикл BRP SeaDoo GTX 300hp LTD Liquid Metal
                                 p.price.product-item__price 1 543 000 ₽
                                 p.product-item__notify-text нет в наличии
-                        .product-item__wrapper.product-item__not-available
+                        .product-item__wrapper.product-item__not-available(data-country="russia")
                             button.product-item__favorite
                             button.product-item__basket
                                 img(src="img/basket-white.svg", alt="")
@@ -456,7 +441,7 @@ html(lang="en")
                                 h4.product-item__title Гидроцикл BRP SeaDoo Spark 60hp 2 up
                                 p.price.product-item__price 732 345 ₽
                                 p.product-item__notify-text нет в наличии
-                        .product-item__wrapper.russia
+                        .product-item__wrapper
                             button.product-item__favorite
                             button.product-item__basket
                                 img(src="img/basket-white.svg", alt="")
@@ -468,7 +453,7 @@ html(lang="en")
                                 h4.product-item__title Гидроцикл BRP SeaDoo Spark GTS 90hp Rental
                                 p.price.product-item__price 857 666 ₽
                                 p.product-item__notify-text нет в наличии
-                        .product-item__wrapper.russia
+                        .product-item__wrapper
                             button.product-item__favorite
                             button.product-item__basket
                                 img(src="img/basket-white.svg", alt="")
