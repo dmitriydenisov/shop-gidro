@@ -671,6 +671,11 @@ section {
   text-transform: uppercase;
 }
 
+.products__popular {
+  position: relative;
+  margin-top: 30px;
+}
+
 .products__tab.tab--active {
   border-bottom: 1px solid #1C62CD;
 }
@@ -690,6 +695,7 @@ section {
 .product-item__wrapper {
   position: relative;
   width: 271px;
+  height: 410px;
   -webkit-transition: all .9s;
   -o-transition: all .9s;
   transition: all .9s;
@@ -1687,6 +1693,47 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.dn {
+  display: none;
+}
+
+.visible.dn {
+  display: block;
+  -webkit-animation-name: opacityVisible;
+  animation-name: opacityVisible;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+.animate {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+@-webkit-keyframes opacityVisible {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityVisible {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .product-card img {
   width: 100%;
 }
@@ -2028,6 +2075,26 @@ input[type=number] {
   margin-bottom: 40px;
 }
 
+.card__input-search::-webkit-input-placeholder {
+  color: #C4C4C4;
+}
+
+.card__input-search::-moz-placeholder {
+  color: #C4C4C4;
+}
+
+.card__input-search:-ms-input-placeholder {
+  color: #C4C4C4;
+}
+
+.card__input-search::-ms-input-placeholder {
+  color: #C4C4C4;
+}
+
+.card__input-search::placeholder {
+  color: #C4C4C4;
+}
+
 .card__input-pickup {
   position: relative;
   font-size: 17px;
@@ -2353,6 +2420,7 @@ input[type=number] {
 
   .catalog__inner-aside {
     display: block;
+    width: 290px;
     min-width: 290px;
     margin-right: 10px;
   }
