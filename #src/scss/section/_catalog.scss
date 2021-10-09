@@ -1,3 +1,4 @@
+// стили каталога
 .catalog{
     &__title{
         font-family: 'SFProDisplay-Bold', sans-serif;
@@ -187,6 +188,7 @@
             bottom: 0;
         }
     }
+    
     .filter__item-drop{
         position: relative;
         &:before{
@@ -509,3 +511,33 @@ input::-webkit-inner-spin-button{
 input[type=number]{
     -moz-appearance: textfield;
 }
+
+.dn{
+    display: none;
+}
+.visible.dn {
+    display: block;
+    -webkit-animation-name: opacityVisible;
+    animation-name: opacityVisible;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+.animate{
+    transform: scale(0);
+    opacity: 0;
+}
+
+  
+  @keyframes opacityVisible {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+  //стили каталога

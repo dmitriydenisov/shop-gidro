@@ -12,12 +12,7 @@ const banner = new Swiper(".banner-section__slider", {
         clickable: true,
       },
 });
-function slider() {
-  const slider = this.closest('.swiper');
-    if (!slider) {
-      return;
-    }
-}
+
 const productSlider = new Swiper('.product-slider',{
   loop: true,
   speed: 900,
@@ -94,6 +89,95 @@ element.forEach(el => {
     searchEnabled: false,
   });
 })
+
+//показать еще в фильтре
+const filterBlock = document.querySelectorAll('.aside-filter__item-drop');
+
+if(filterBlock){
+
+  for(let item of filterBlock){
+
+    const itemBtn = item.querySelector('.watch-more__btn');
+
+    const hideItems = item.querySelectorAll('.dn');
+
+    if(itemBtn){
+      itemBtn.addEventListener('click', function(e){
+
+        e.preventDefault();
+
+        for(let filter of hideItems){
+          if(filter.classList.contains('visible')){
+            filter.classList.remove('visible');
+            itemBtn.classList.remove('dn')
+          }
+          else{
+            filter.classList.add('visible');
+            itemBtn.classList.add('dn')
+          }
+        }      
+      })
+    }
+  }
+}
+
+//фильтр
+// const checks = document.querySelectorAll('.aside-filter__input');
+// const cards = document.querySelectorAll('.product-item__wrapper');
+
+// function filter (category, items) {
+//   items.forEach((item) => {
+//     const isItemFiltred = !item.classList.contains(category)
+//     // `${item}[data-filter="${category}"]`
+//     // const isShowAll = category.toLowerCase() === 'all'
+//     if(isItemFiltred){
+//       item.classList.add('animate')
+//     }else{
+//       item.classList.remove('animate')
+//     }
+//   })
+// }
+// checks.forEach((check) => check.addEventListener('click', checkedHandler))
+
+// function checkedHandler () {
+//   if(this.checked){
+//     const currentCategory = this.dataset.filter
+//     filter(currentCategory, cards)
+//   }
+// }
+
+// cards.forEach((card) => {
+//   card.ontransitionend = function () {
+//     if(card.classList.contains('animate')){
+//       card.classList.add('dn')
+//     }
+//   }
+// })
+let filters = document.querySelectorAll('input[data-filter]');
+let all_cards = document.querySelectorAll('div[data-country]');
+
+
+if (filters !== null)
+    filters.forEach(function (filter) {
+        filter.addEventListener("change", function () {
+            let checkbox = document.querySelectorAll("input[type=checkbox]:checked");
+            const values = Array.from(checkbox).map(elem => {
+                return elem.dataset.filter;
+            })
+            console.log(values)
+            all_cards.forEach(function (card) {
+              console.log(values.includes(card.dataset.country))
+                if (!values.length || values.includes(card.dataset.country)) {
+                    card.classList.remove('animate')
+                    card.classList.remove('dn')
+                }else{
+                    card.classList.add('animate')
+                    card.classList.add('dn')
+                }
+            });
+            
+        });
+    });
 
 //скрипт мобильного меню
 const mobileBtn = document.querySelector('.menu__btn');

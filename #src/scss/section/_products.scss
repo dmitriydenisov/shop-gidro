@@ -35,6 +35,10 @@
             text-transform: uppercase;
         }
     }
+    &__popular{
+        position: relative;
+        margin-top: 30px;
+    }
 }
 .products__tab.tab--active{
     border-bottom: 1px solid #1C62CD;
@@ -53,6 +57,7 @@
     &-item__wrapper{
         position: relative;
         width: 271px;
+        height: 410px;
         transition: all .9s;
         &--list{
             width: 100%;

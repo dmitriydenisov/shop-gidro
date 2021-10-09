@@ -50,6 +50,9 @@
     color: #C4C4C4;
     margin-top: 15px;
     margin-bottom: 40px;
+    &::placeholder{
+        color: #C4C4C4;
+    }
 }
 .card__input-pickup {
     position: relative;
