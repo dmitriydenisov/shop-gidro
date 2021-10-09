@@ -126,6 +126,38 @@ if(filterBlock){
   }
 }
 
+//фильтр
+const checks = document.querySelectorAll('.aside-filter__input');
+const cards = document.querySelectorAll('.product-item__wrapper');
+
+function filter (category, items) {
+  items.forEach((item) => {
+    const isItemFiltred = !item.classList.contains(category)
+    // `${item}[data-filter="${category}"]`
+    // const isShowAll = category.toLowerCase() === 'all'
+    if(isItemFiltred){
+      item.classList.add('animate')
+    }else{
+      item.classList.remove('animate')
+    }
+  })
+}
+checks.forEach((check) => check.addEventListener('click', checkedHandler))
+
+function checkedHandler () {
+  if(this.checked){
+    const currentCategory = this.dataset.filter
+    filter(currentCategory, cards)
+  }
+}
+
+cards.forEach((card) => {
+  card.ontransitionend = function () {
+    if(card.classList.contains('animate')){
+      card.classList.add('dn')
+    }
+  }
+})
 
 //скрипт мобильного меню
 const mobileBtn = document.querySelector('.menu__btn');

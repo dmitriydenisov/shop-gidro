@@ -1,3 +1,4 @@
+// стили каталога
 .catalog{
     &__title{
         font-family: 'SFProDisplay-Bold', sans-serif;
@@ -514,12 +515,6 @@ input[type=number]{
 .dn{
     display: none;
 }
-// .watch-more .watch-more--active ~ .dn{
-//     display: block;
-// }
-// .watch-more.watch-more--active .aside-filter__content-box.dn {
-//     display: block;
-// }
 .visible.dn {
     display: block;
     -webkit-animation-name: opacityVisible;
@@ -528,16 +523,12 @@ input[type=number]{
     animation-fill-mode: forwards;
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
-  }
-  @-webkit-keyframes opacityVisible {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
+}
+.animate{
+    transform: scale(0);
+    opacity: 0;
+}
+
   
   @keyframes opacityVisible {
     0% {
@@ -548,3 +539,5 @@ input[type=number]{
       opacity: 1;
     }
   }
+
+  //стили каталога
