@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title drive moto
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="libs/nouislider/nouislider.min.css")
+        link(rel="stylesheet", href="libs/choices/choices.min.css")
+        link(rel="stylesheet" href="css/main.min.css")
+
+    body
+        header.header
+            .header__top
+                .container
+                    .header__top-inner
+                        nav.menu
+                            button.menu__btn
+                                .menu__btn-line
+                                .menu__btn-line
+                                .menu__btn-line
+                            ul.menu__list
+                                li.menu__item
+                                    a.menu__link(href="shops.html") Магазины
+                                li.menu__item
+                                    a.menu__link(href="stocks.html") Акции
+                                li.menu__item
+                                    a.menu__link(href="delivery-and-payment.html") Доставка и оплата
+                        a.logo(href="/")
+                            img.logo__img(src="img/logo.svg", alt="")
+                        .header__box
+                            .header__adress Москва,  ул. Науки  25
+                            ul.user-list
+                                li.user-list__item
+                                    a.user-list__link(href="#")
+                                        img.user-list__img(src="img/heart.svg", alt="")
+                                li.user-list__item
+                                    a.user-list__link(href="#")
+                                        img.user-list__img(src="img/user.svg", alt="")
+                                li.user-list__item
+                                    a.user-list__link.basket(href="#")
+                                        img.user-list__img(src="img/basket.svg", alt="")
+                                        p.basket__num 1
+            ul.menu-mobile__list 
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/user.svg", alt="")
+                        p Войти
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/user.svg", alt="")
+                        p Регистрация
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/heart.svg", alt="")
+                        p Избранное
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/basket.svg", alt="")
+                        p Корзина
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="#")
+                        img.menu-mobile__img(src="img/shop.svg", alt="")
+                        p Магазины
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="stocks.html")
+                        img.menu-mobile__img(src="img/sale.svg", alt="")
+                        p Акции
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="delivery-and-payment.html")
+                        img.menu-mobile__img(src="img/div.svg", alt="")
+                        p Доставка и оплата
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="catalog.html")
+                        p Квадроциклы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="catalog.html")
+                        p Катера
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="catalog.html")
+                        p Гидроциклы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="catalog.html")
+                        p Лодки
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="catalog.html")
+                        p Вездеходы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="catalog.html")
+                        p Снегоходы
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="catalog.html")
+                        p Двигатели
+                li.menu-mobile__item
+                    a.menu-mobile__link(href="catalog.html")
+                        p Запчасти
+            .menu-mobole__wrapper
+                ul.menu-mobile__line
+                    li.menu__item
+                        a.menu__link(href="shops.html") Магазины
+                    li.menu__item
+                        a.menu__link(href="stocks.html") Акции
+                    li.menu__item
+                        a.menu__link(href="delivery-and-payment.html") Доставка и оплата
+            .header__bottom
+                .container
+                    ul.menu-categories
+                        li.menu-categories__item
+                            a.menu-categories__link(href="catalog.html") Квадроциклы
+                        li.menu-categories__item
+                            a.menu-categories__link(href="catalog.html") Катера
+                        li.menu-categories__item
+                            a.menu-categories__link(href="catalog.html") Гидроциклы
+                        li.menu-categories__item
+                            a.menu-categories__link(href="catalog.html") Лодки
+                        li.menu-categories__item
+                            a.menu-categories__link(href="catalog.html") Вездеходы
+                        li.menu-categories__item
+                            a.menu-categories__link(href="catalog.html") Снегоходы
+                        li.menu-categories__item
+                            a.menu-categories__link(href="catalog.html") Двигатели
+                        li.menu-categories__item
+                            a.menu-categories__link(href="catalog.html") Запчасти
+        .breadcrumbs
+            .container
+                .breadcrumbs__inner
+                    ul.breadcrumbs__list.mobile-overflov
+                        li.breadcrumbs__list-item 
+                            a(href="index.html") Главная
+                        li.breadcrumbs__list-item 
+                            span Магазины
+        section.shops
+            .container 
+                h2.catalog__title Наши магазины
+
+                ul.card__list
+                    li.card__list-item.card__list-item--title
+                        .card__list-address Адрес
+                        .card__list-workhours Режим работы
+                    li.card__list-item
+                        .card__list-address.card__list-mobile
+                            .mobile-title Адрес
+                            | Москва, ул. Науки 25
+                        .card__list-workhours.card__list-mobile
+                            .mobile-title Режим работы
+                            div.workhours
+                                span пн-сб: 
+                                span 08:00-19:00
+                            div.workhours
+                                span вс: 
+                                span 09:00-17:00
+                    li.card__list-item
+                        .card__list-address.card__list-mobile
+                            .mobile-title Адрес
+                            | Москва, ул.  Южная 134
+                        .card__list-workhours.card__list-mobile
+                            .mobile-title Режим работы
+                            div.workhours
+                                span пн-сб: 
+                                span 08:00-19:00
+                            div.workhours
+                                span вс: 
+                                span 09:00-17:00
+                    li.card__list-item
+                        .card__list-address.card__list-mobile
+                            .mobile-title Адрес
+                            | Санкт-Петербург,<br> ул. Красная 19
+                        .card__list-workhours.card__list-mobile
+                            .mobile-title Режим работы
+                            div.workhours
+                                span пн-сб: 
+                                span 08:00-19:00
+                            div.workhours
+                                span вс: 
+                                span 09:00-17:00
+                    li.card__list-item
+                        .card__list-address.card__list-mobile
+                            .mobile-title Адрес
+                            | Киев, ул Шевченко 167
+                        .card__list-workhours.card__list-mobile
+                            .mobile-title Режим работы
+                            div.workhours
+                                span пн-сб: 
+                                span 08:00-19:00
+                            div.workhours
+                                span вс: 
+                                span 09:00-17:00
+
+        footer.footer
+            .container
+                .footer__top 
+                    .footer__top-inner 
+                        .footer__top-item.footer__top-newslatter 
+                            h6.footer__top-title Подпишитесь на нашу рассылку и узнавайте о акциях быстрее
+                            form.footer-form
+                                input.footer-form__input(type="text" placeholder="Введите ваш e-mail:")
+                                button.footer-form__btn(type="submit") Отправить
+                        .footer__top-item 
+                            h6.footer__top-title Информация
+                            ul.footer-list
+                                li.fiiter-list__item
+                                    a(href="#") О компании
+                                li.fiiter-list__item
+                                    a(href="#") Контакты
+                                li.fiiter-list__item
+                                    a(href="#") Акции
+                                li.fiiter-list__item
+                                    a(href="#") Магазины
+                        .footer__top-item 
+                            h6.footer__top-title Интернет-магазин
+                            ul.footer-list
+                                li.fiiter-list__item
+                                    a(href="#") Доставка и самовывоз
+                                li.fiiter-list__item
+                                    a(href="#") Оплата
+                                li.fiiter-list__item
+                                    a(href="#") Возврат-обмен
+                                li.fiiter-list__item
+                                    a(href="#") Новости
+                        .footer__top-item.footer__top-social
+                            ul.social-list
+                                li.social-list__item 
+                                    a(href="#")
+                                        img(src="img/social/instagram.svg", alt="")
+                                li.social-list__item 
+                                    a(href="#")
+                                        img(src="img/social/vk.svg", alt="")
+                                li.social-list__item 
+                                    a(href="#")
+                                        img(src="img/social/facebook.svg", alt="")
+                                li.social-list__item 
+                                    a(href="#")
+                                        img(src="img/social/youtube.svg", alt="")
+                .footer__bottom 
+                    a.footer__bottom-link(href="#") Договор оферты
+                    a.footer__bottom-link(href="#") Политика обработки персональных данных
+
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(src="libs/nouislider/nouislider.min.js")
+    script(src="libs/choices/choices.min.js")
+    script(src="js/main.js")
